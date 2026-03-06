@@ -3,15 +3,15 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Activities', href: '#activities' },
-  { label: 'Team', href: '#team' },
-  { label: 'Events', href: '#events' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Register', href: '#register' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Activities', href: '/activities' },
+  { label: 'Team', href: '/team' },
+  { label: 'Events', href: '/events' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Register', href: '/register' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
