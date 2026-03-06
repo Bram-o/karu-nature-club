@@ -47,14 +47,14 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-600 bg-moss-100 px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             About Us
           </span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-forest-700 mb-4">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
             Who We Are
           </h2>
-          <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full mb-6" />
-          <p className="font-body text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+          <p className="font-lato text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
             The Karatina University Nature Club is a student-led organization dedicated to fostering a deep connection between students and the natural world.
           </p>
         </div>
@@ -62,25 +62,25 @@ export default function About() {
         {/* Two-column intro */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20 animate-on-scroll">
           <div>
-            <h3 className="font-display font-bold text-2xl text-forest-700 mb-4">Our Story & Mission</h3>
-            <p className="font-body text-gray-600 leading-relaxed mb-4">
+            <h3 className="font-playfair font-bold text-2xl text-forest mb-4">Our Story & Mission</h3>
+            <p className="font-lato text-gray-600 leading-relaxed mb-4">
               Founded within the halls of Karatina University, the KarU Nature Club emerged from a shared passion for Kenya's remarkable biodiversity. We believe that students who connect with nature become better stewards of our planet.
             </p>
-            <p className="font-body text-gray-600 leading-relaxed mb-6">
+            <p className="font-lato text-gray-600 leading-relaxed mb-6">
               Our mission is to inspire, educate, and empower the KarU community to appreciate, protect, and sustainably interact with the natural environment — from the slopes of Mt. Kenya to the forests of Aberdare.
             </p>
             <div className="flex gap-4">
-              <a href="#activities" className="inline-flex items-center gap-2 bg-forest-600 text-cream font-body font-bold px-6 py-3 rounded-full hover:bg-forest-700 transition-colors">
+              <a href="#activities" className="inline-flex items-center gap-2 bg-forest text-cream font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/90 transition-colors">
                 Our Activities
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="#register" className="inline-flex items-center gap-2 border-2 border-forest-600 text-forest-700 font-body font-bold px-6 py-3 rounded-full hover:bg-forest-50 transition-colors">
+              <a href="#register" className="inline-flex items-center gap-2 border-2 border-forest text-forest font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/5 transition-colors">
                 Join Us
               </a>
             </div>
           </div>
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-forest-700/20">
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-forest/20">
               <img
                 src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80"
                 alt="Nature landscape"
@@ -88,9 +88,9 @@ export default function About() {
               />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-forest-700 text-cream rounded-xl p-4 shadow-xl">
-              <div className="font-display font-bold text-3xl text-moss-400">5+</div>
-              <div className="font-body text-xs text-cream/70 uppercase tracking-wider">Years of Impact</div>
+            <div className="absolute -bottom-6 -left-6 bg-forest text-cream rounded-xl p-4 shadow-xl">
+              <div className="font-playfair font-bold text-3xl text-moss">5+</div>
+              <div className="font-lato text-xs text-cream/70 uppercase tracking-wider">Years of Impact</div>
             </div>
           </div>
         </div>
@@ -98,8 +98,8 @@ export default function About() {
         {/* Why Join Us */}
         <div className="animate-on-scroll">
           <div className="text-center mb-12">
-            <h3 className="font-display font-bold text-3xl text-forest-700 mb-3">Why Join Us?</h3>
-            <p className="font-body text-gray-500 max-w-lg mx-auto">
+            <h3 className="font-playfair font-bold text-3xl text-forest mb-3">Why Join Us?</h3>
+            <p className="font-lato text-gray-500 max-w-lg mx-auto">
               Being part of KarU Nature Club opens doors to unique experiences and opportunities.
             </p>
           </div>
@@ -109,11 +109,10 @@ export default function About() {
               <div
                 key={i}
                 className="card-hover bg-white rounded-2xl p-6 border border-gray-100 shadow-sm"
-                style={{ animationDelay: `${i * 100}ms` }}
               >
                 <div className="text-3xl mb-4">{item.icon}</div>
-                <h4 className="font-display font-bold text-lg text-forest-700 mb-2">{item.title}</h4>
-                <p className="font-body text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                <h4 className="font-playfair font-bold text-lg text-forest mb-2">{item.title}</h4>
+                <p className="font-lato text-sm text-gray-500 leading-relaxed">{item.desc}</p>
               </div>
             ))}
           </div>

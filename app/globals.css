@@ -13,16 +13,22 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--cream);
   color: #1a1a1a;
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Preloader */
@@ -44,9 +50,9 @@ body {
 
 /* Navbar glassmorphism */
 .nav-glass {
-  background: rgba(44, 95, 45, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(44, 95, 45, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(151, 188, 98, 0.2);
 }
 
@@ -58,8 +64,9 @@ body {
 /* Section animations */
 .animate-on-scroll {
   opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-on-scroll.visible {
@@ -93,53 +100,66 @@ body {
 
 /* Card hover effects */
 .card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(44, 95, 45, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(44, 95, 45, 0.18);
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F8F5EE;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #97BC62;
-  border-radius: 3px;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2C5F2D;
 }
 
 /* Admin announcement banner */
 .announcement-banner {
+  height: 40px;
+  display: flex;
+  align-items: center;
   animation: slideDown 0.5s ease-out;
 }
 
-/* ADD this after the existing .announcement-banner rule */
-.announcement-banner {
-  height: 32px;
-  display: flex;
-  align-items: center;
-}
-
 @keyframes slideDown {
-  from { transform: translateY(-100%); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from { 
+    transform: translateY(-100%); 
+    opacity: 0; 
+  }
+  to { 
+    transform: translateY(0); 
+    opacity: 1; 
+  }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-12px); 
+  }
 }
 
 /* Green texture overlay for sections */
 .nature-texture {
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(44, 95, 45, 0.03) 0%, transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(151, 188, 98, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(44, 95, 45, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(151, 188, 98, 0.04) 0%, transparent 50%);
 }
 
 /* Timeline */
@@ -162,19 +182,46 @@ body {
 }
 
 /* Input focus styles */
-input:focus, textarea:focus, select:focus {
+input:focus, 
+textarea:focus, 
+select:focus {
   outline: none;
   border-color: #97BC62;
   box-shadow: 0 0 0 3px rgba(151, 188, 98, 0.2);
+  transition: all 0.2s ease;
 }
 
 /* Event card badge */
 .badge {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 4px 12px;
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image loading */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 80px;
+    right: 16px;
+  }
+  
+  .back-to-top {
+    bottom: 16px;
+    right: 16px;
+  }
 }

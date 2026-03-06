@@ -17,15 +17,15 @@ export default function FloatingButtons() {
     <>
       {/* Admin announcement banner */}
       {showAnnouncement && (
-        <div className="announcement-banner fixed top-0 left-0 right-0 z-[60] bg-moss-500 text-forest-900 px-4 py-2 flex items-center justify-between">
-          <p className="font-body text-xs font-bold flex items-center gap-2">
-            <span className="w-1.5 h-1.5 bg-forest-700 rounded-full animate-pulse" />
+        <div className="announcement-banner fixed top-0 left-0 right-0 z-[60] bg-moss text-forest px-4 py-2 flex items-center justify-between shadow-md">
+          <p className="font-lato text-xs font-bold flex items-center gap-2">
+            <span className="w-1.5 h-1.5 bg-forest rounded-full animate-pulse" />
             📢 Semester Registration Open! Join by March 31st and get 20% off membership fee.
-            <a href="#register" className="underline hover:no-underline">Register now →</a>
+            <a href="#register" className="underline hover:no-underline ml-1">Register now →</a>
           </p>
           <button
             onClick={() => setShowAnnouncement(false)}
-            className="ml-4 text-forest-700 hover:text-forest-900 font-bold text-lg leading-none"
+            className="ml-4 text-forest hover:text-forest/80 font-bold text-lg leading-none"
             aria-label="Close announcement"
           >
             ×
@@ -54,7 +54,7 @@ export default function FloatingButtons() {
         className={`back-to-top ${!showTop ? 'hidden' : ''}`}
         aria-label="Back to top"
       >
-        <div className="w-12 h-12 rounded-full bg-forest-600 shadow-lg shadow-forest-600/30 flex items-center justify-center hover:bg-forest-500 transition-colors">
+        <div className="w-12 h-12 rounded-full bg-forest shadow-lg shadow-forest/30 flex items-center justify-center hover:bg-forest/90 transition-colors">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 15l-6-6-6 6"/>
           </svg>

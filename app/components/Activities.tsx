@@ -86,37 +86,13 @@ const subCommittees = [
     desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
     activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
   },
-  {
-    id: 8,
-    name: 'Research & Innovation',
-    icon: '🔬',
-    color: 'bg-rose-50 border-rose-200',
-    accentColor: 'text-rose-700',
-    leader: 'Mary Wambui',
-    role: 'Chairperson',
-    avatar: 'MW',
-    desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
-    activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
-  },
-  {
-    id: 9,
-    name: 'Research & Innovation',
-    icon: '🔬',
-    color: 'bg-rose-50 border-rose-200',
-    accentColor: 'text-rose-700',
-    leader: 'Mary Wambui',
-    role: 'Chairperson',
-    avatar: 'MW',
-    desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
-    activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
-  },
 ]
 
 export default function Activities() {
   const [active, setActive] = useState<number | null>(null)
 
   return (
-    <section id="activities" className="py-24 bg-forest-700 relative overflow-hidden">
+    <section id="activities" className="py-24 bg-forest relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         {[...Array(20)].map((_, i) => (
@@ -138,14 +114,14 @@ export default function Activities() {
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-400 bg-moss-500/20 px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-moss bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             Sub-Committees
           </span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-cream mb-4">
             Activities & Committees
           </h2>
-          <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full mb-6" />
-          <p className="font-body text-lg text-cream/70 max-w-2xl mx-auto">
+          <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+          <p className="font-lato text-lg text-cream/70 max-w-2xl mx-auto">
             Seven dedicated committees driving our mission — each led by passionate students committed to their focus area.
           </p>
         </div>
@@ -156,7 +132,7 @@ export default function Activities() {
             <div
               key={committee.id}
               className={`bg-white rounded-2xl overflow-hidden card-hover cursor-pointer border ${
-                active === committee.id ? 'ring-2 ring-moss-500' : 'border-transparent'
+                active === committee.id ? 'ring-2 ring-moss' : 'border-transparent'
               }`}
               onClick={() => setActive(active === committee.id ? null : committee.id)}
             >
@@ -167,7 +143,7 @@ export default function Activities() {
                     #{committee.id}
                   </span>
                 </div>
-                <h3 className={`font-display font-bold text-lg ${committee.accentColor}`}>
+                <h3 className={`font-playfair font-bold text-lg ${committee.accentColor}`}>
                   {committee.name}
                 </h3>
               </div>
@@ -175,26 +151,26 @@ export default function Activities() {
               <div className="p-6">
                 {/* Leader */}
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-9 h-9 rounded-full bg-forest-100 flex items-center justify-center text-forest-700 font-bold text-sm font-body">
+                  <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-bold text-sm font-lato">
                     {committee.avatar}
                   </div>
                   <div>
-                    <p className="font-body font-bold text-sm text-gray-800">{committee.leader}</p>
-                    <p className="font-body text-xs text-gray-400">{committee.role}</p>
+                    <p className="font-lato font-bold text-sm text-gray-800">{committee.leader}</p>
+                    <p className="font-lato text-xs text-gray-400">{committee.role}</p>
                   </div>
                 </div>
 
-                <p className="font-body text-sm text-gray-500 leading-relaxed mb-4">
+                <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4">
                   {committee.desc}
                 </p>
 
                 {/* Expanded activities */}
                 {active === committee.id && (
                   <div className="border-t border-gray-100 pt-4 mt-2">
-                    <p className="font-body text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Key Activities</p>
+                    <p className="font-lato text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Key Activities</p>
                     <div className="flex flex-wrap gap-2">
                       {committee.activities.map((act) => (
-                        <span key={act} className="text-xs font-body font-medium bg-forest-50 text-forest-700 border border-forest-200 px-3 py-1 rounded-full">
+                        <span key={act} className="text-xs font-lato font-medium bg-forest/5 text-forest border border-forest/20 px-3 py-1 rounded-full">
                           {act}
                         </span>
                       ))}
@@ -202,7 +178,7 @@ export default function Activities() {
                   </div>
                 )}
 
-                <button className={`mt-4 text-xs font-body font-bold ${committee.accentColor} flex items-center gap-1 hover:gap-2 transition-all`}>
+                <button className={`mt-4 text-xs font-lato font-bold ${committee.accentColor} flex items-center gap-1 hover:gap-2 transition-all`}>
                   {active === committee.id ? 'Show less' : 'View details'}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <path d={active === committee.id ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />

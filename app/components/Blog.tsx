@@ -56,18 +56,18 @@ const testimonials = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-24 bg-forest-50 relative">
+    <section id="blog" className="py-24 bg-gray-50 relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Blog */}
         <div className="mb-20">
           <div className="text-center mb-16 animate-on-scroll">
-            <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-600 bg-moss-100 px-4 py-1.5 rounded-full mb-4">
+            <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
               Stories & Insights
             </span>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-forest-700 mb-4">
+            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
               Our Blog
             </h2>
-            <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full" />
+            <div className="w-16 h-1 bg-moss mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
@@ -79,18 +79,18 @@ export default function Blog() {
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className={`badge ${post.categoryColor} text-xs`}>{post.category}</span>
-                    <span className="font-body text-xs text-gray-400">{post.readTime}</span>
+                    <span className="font-lato text-xs text-gray-400">{post.readTime}</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-forest-800 mb-2 leading-snug">{post.title}</h3>
-                  <p className="font-body text-sm text-gray-500 leading-relaxed mb-4">{post.excerpt}</p>
+                  <h3 className="font-playfair font-bold text-lg text-forest mb-2 leading-snug">{post.title}</h3>
+                  <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-forest-100 flex items-center justify-center text-xs font-bold text-forest-700">
+                      <div className="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center text-xs font-bold text-forest">
                         {post.author.split(' ').map(n => n[0]).join('')}
                       </div>
-                      <span className="font-body text-xs text-gray-500">{post.author}</span>
+                      <span className="font-lato text-xs text-gray-500">{post.author}</span>
                     </div>
-                    <span className="font-body text-xs text-gray-400">{post.date}</span>
+                    <span className="font-lato text-xs text-gray-400">{post.date}</span>
                   </div>
                 </div>
               </article>
@@ -101,23 +101,23 @@ export default function Blog() {
         {/* Testimonials */}
         <div className="animate-on-scroll">
           <div className="text-center mb-12">
-            <h3 className="font-display font-bold text-3xl text-forest-700 mb-3">What Members Say</h3>
-            <div className="w-12 h-1 bg-moss-500 mx-auto rounded-full" />
+            <h3 className="font-playfair font-bold text-3xl text-forest mb-3">What Members Say</h3>
+            <div className="w-12 h-1 bg-moss mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm relative">
                 {/* Quote mark */}
-                <div className="absolute top-4 right-6 text-5xl text-moss-200 font-display leading-none select-none">"</div>
-                <p className="font-body text-gray-600 leading-relaxed mb-6 text-sm italic relative z-10">{t.quote}</p>
+                <div className="absolute top-4 right-6 text-5xl text-moss/20 font-playfair leading-none select-none">"</div>
+                <p className="font-lato text-gray-600 leading-relaxed mb-6 text-sm italic relative z-10">{t.quote}</p>
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-forest-100 flex items-center justify-center font-bold text-sm text-forest-700">
+                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center font-bold text-sm text-forest">
                     {t.avatar}
                   </div>
                   <div>
-                    <p className="font-body font-bold text-sm text-gray-800">{t.name}</p>
-                    <p className="font-body text-xs text-gray-400">{t.year}</p>
+                    <p className="font-lato font-bold text-sm text-gray-800">{t.name}</p>
+                    <p className="font-lato text-xs text-gray-400">{t.year}</p>
                   </div>
                 </div>
               </div>

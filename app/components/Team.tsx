@@ -1,9 +1,9 @@
 'use client'
 
 const team = [
-  { name: 'Alex Kariuki', role: 'Club President', avatar: 'AK', color: 'bg-forest-100', twitter: '#', linkedin: '#' },
-  { name: 'Brenda Wanjiru', role: 'Vice President', avatar: 'BW', color: 'bg-moss-100', twitter: '#', linkedin: '#' },
-  { name: 'Collins Mugo', role: 'Secretary General', avatar: 'CM', color: 'bg-earth-100', twitter: '#', linkedin: '#' },
+  { name: 'Alex Kariuki', role: 'Club President', avatar: 'AK', color: 'bg-forest/10', twitter: '#', linkedin: '#' },
+  { name: 'Brenda Wanjiru', role: 'Vice President', avatar: 'BW', color: 'bg-moss/20', twitter: '#', linkedin: '#' },
+  { name: 'Collins Mugo', role: 'Secretary General', avatar: 'CM', color: 'bg-earth/20', twitter: '#', linkedin: '#' },
   { name: 'Diana Njoki', role: 'Treasurer', avatar: 'DN', color: 'bg-blue-100', twitter: '#', linkedin: '#' },
   { name: 'Edwin Mwenda', role: 'Publicity & Media', avatar: 'EM', color: 'bg-amber-100', twitter: '#', linkedin: '#' },
   { name: 'Faith Wanjiku', role: 'Events Coordinator', avatar: 'FW', color: 'bg-rose-100', twitter: '#', linkedin: '#' },
@@ -14,14 +14,14 @@ export default function Team() {
     <section id="team" className="py-24 bg-cream relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-600 bg-moss-100 px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             Leadership
           </span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-forest-700 mb-4">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
             Meet Our Team
           </h2>
-          <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full mb-6" />
-          <p className="font-body text-lg text-gray-500 max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+          <p className="font-lato text-lg text-gray-500 max-w-xl mx-auto">
             Passionate student leaders driving the KarU Nature Club's vision and activities.
           </p>
         </div>
@@ -31,10 +31,10 @@ export default function Team() {
             <div key={i} className="card-hover text-center group">
               {/* Avatar */}
               <div className={`w-20 h-20 mx-auto rounded-2xl ${member.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                <span className="font-display font-bold text-xl text-forest-700">{member.avatar}</span>
+                <span className="font-playfair font-bold text-xl text-forest">{member.avatar}</span>
               </div>
-              <h4 className="font-display font-bold text-sm text-forest-800 mb-1">{member.name}</h4>
-              <p className="font-body text-xs text-gray-400 mb-3">{member.role}</p>
+              <h4 className="font-playfair font-bold text-sm text-forest mb-1">{member.name}</h4>
+              <p className="font-lato text-xs text-gray-400 mb-3">{member.role}</p>
               {/* Social icons */}
               <div className="flex justify-center gap-2">
                 <a href={member.twitter} className="w-7 h-7 rounded-full bg-gray-100 hover:bg-sky-100 hover:text-sky-600 flex items-center justify-center transition-colors">
@@ -50,7 +50,7 @@ export default function Team() {
 
         {/* Full team CTA */}
         <div className="text-center mt-12 animate-on-scroll">
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest-300 text-forest-700 font-body font-bold px-8 py-3 rounded-full hover:bg-forest-50 transition-colors">
+          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest/30 text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-forest/5 transition-colors">
             View All Members
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>

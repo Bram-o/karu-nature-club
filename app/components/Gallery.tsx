@@ -12,17 +12,17 @@ const galleryImages = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="py-24 bg-forest-900 relative overflow-hidden">
+    <section id="gallery" className="py-24 bg-gray-900 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-400 bg-moss-500/20 px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-moss bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             Our Memories
           </span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-cream mb-4">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-cream mb-4">
             Photo Gallery
           </h2>
-          <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full mb-6" />
-          <p className="font-body text-lg text-cream/60 max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+          <p className="font-lato text-lg text-cream/60 max-w-xl mx-auto">
             Moments captured from our adventures, conservation drives, and community events.
           </p>
         </div>
@@ -40,8 +40,8 @@ export default function Gallery() {
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="font-body text-sm text-cream font-medium">{img.alt}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="font-lato text-sm text-cream font-medium">{img.alt}</p>
               </div>
             </div>
           ))}
@@ -53,7 +53,7 @@ export default function Gallery() {
             href="https://photos.google.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-cream font-body font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-cream font-lato font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13v6l5 3-1 1.73L9 14V7h2z"/>

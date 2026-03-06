@@ -60,8 +60,8 @@ export default function HeroCarousel() {
       />
 
       {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-r from-forest-900/80 via-forest-800/50 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-forest-900/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-forest/80 via-forest/50 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-forest/60 via-transparent to-transparent" />
 
       {/* Decorative leaf pattern */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 opacity-5">
@@ -76,13 +76,13 @@ export default function HeroCarousel() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-24 md:py-36">
         <div className="max-w-2xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-moss-500/20 border border-moss-400/30 text-moss-300 px-4 py-1.5 rounded-full text-sm font-body font-medium mb-6 backdrop-blur-sm">
-            <span className="w-2 h-2 bg-moss-400 rounded-full animate-pulse-slow" />
+          <div className="inline-flex items-center gap-2 bg-moss/20 border border-moss/30 text-moss px-4 py-1.5 rounded-full text-sm font-lato font-medium mb-6 backdrop-blur-sm">
+            <span className="w-2 h-2 bg-moss rounded-full animate-pulse" />
             Karatina University Nature Club
           </div>
 
           <h1
-            className="font-display font-bold text-cream leading-tight mb-6"
+            className="font-playfair font-bold text-cream leading-tight mb-6"
             style={{
               fontSize: 'clamp(2.5rem, 5vw, 4rem)',
               opacity: animating ? 0 : 1,
@@ -94,7 +94,7 @@ export default function HeroCarousel() {
           </h1>
 
           <p
-            className="font-body text-lg text-cream/80 mb-8 leading-relaxed max-w-xl"
+            className="font-lato text-lg text-cream/80 mb-8 leading-relaxed max-w-xl"
             style={{
               opacity: animating ? 0 : 1,
               transform: animating ? 'translateY(20px)' : 'translateY(0)',
@@ -107,7 +107,7 @@ export default function HeroCarousel() {
           <div className="flex flex-wrap gap-4">
             <a
               href={slide.ctaHref}
-              className="inline-flex items-center gap-2 bg-moss-500 text-forest-900 font-body font-bold px-8 py-3.5 rounded-full hover:bg-moss-400 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-moss-500/30"
+              className="inline-flex items-center gap-2 bg-moss text-forest font-lato font-bold px-8 py-3.5 rounded-full hover:bg-moss/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-moss/30"
             >
               {slide.cta}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -116,7 +116,7 @@ export default function HeroCarousel() {
             </a>
             <a
               href="#about"
-              className="inline-flex items-center gap-2 border border-cream/30 text-cream font-body font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              className="inline-flex items-center gap-2 border border-cream/30 text-cream font-lato font-medium px-8 py-3.5 rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Learn More
             </a>
@@ -131,7 +131,7 @@ export default function HeroCarousel() {
             key={i}
             onClick={() => goTo(i)}
             className={`transition-all duration-300 rounded-full ${
-              i === current ? 'w-8 h-2.5 bg-moss-400' : 'w-2.5 h-2.5 bg-cream/40 hover:bg-cream/60'
+              i === current ? 'w-8 h-2.5 bg-moss' : 'w-2.5 h-2.5 bg-cream/40 hover:bg-cream/60'
             }`}
           />
         ))}
@@ -139,14 +139,14 @@ export default function HeroCarousel() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 right-8 flex flex-col items-center gap-2 text-cream/50 z-10">
-        <span className="text-xs font-body tracking-widest uppercase rotate-90 origin-center mb-4">Scroll</span>
+        <span className="text-xs font-lato tracking-widest uppercase rotate-90 origin-center mb-4">Scroll</span>
         <div className="w-px h-16 bg-gradient-to-b from-cream/50 to-transparent" />
       </div>
 
       {/* Stats bar */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-forest-900/80 backdrop-blur-md border-t border-moss-500/20 px-8 py-4 rounded-t-2xl flex flex-wrap gap-8 justify-around">
+          <div className="bg-forest/80 backdrop-blur-md border-t border-moss/20 px-8 py-4 rounded-t-2xl flex flex-wrap gap-8 justify-around">
             {[
               { value: '500+', label: 'Active Members' },
               { value: '9', label: 'Sub-Committees' },
@@ -154,8 +154,8 @@ export default function HeroCarousel() {
               { value: '2019', label: 'Founded' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-display font-bold text-2xl text-moss-400">{stat.value}</div>
-                <div className="font-body text-xs text-cream/60 tracking-wide uppercase">{stat.label}</div>
+                <div className="font-playfair font-bold text-2xl text-moss">{stat.value}</div>
+                <div className="font-lato text-xs text-cream/60 tracking-wide uppercase">{stat.label}</div>
               </div>
             ))}
           </div>

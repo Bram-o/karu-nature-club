@@ -60,14 +60,14 @@ export default function Events() {
     <section id="events" className="py-24 bg-white relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <span className="inline-block text-xs font-body font-bold uppercase tracking-widest text-moss-600 bg-moss-100 px-4 py-1.5 rounded-full mb-4">
+          <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             What&apos;s Happening
           </span>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-forest-700 mb-4">
+          <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
             Upcoming Events
           </h2>
-          <div className="w-16 h-1 bg-moss-500 mx-auto rounded-full mb-6" />
-          <p className="font-body text-lg text-gray-500 max-w-xl mx-auto">
+          <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+          <p className="font-lato text-lg text-gray-500 max-w-xl mx-auto">
             From mountain hikes to conservation drives — join us for our exciting semester calendar.
           </p>
         </div>
@@ -84,14 +84,14 @@ export default function Events() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                 <div className="absolute top-4 left-4">
-                  <span className={`badge ${event.categoryColor} text-xs font-body font-bold px-3 py-1`}>
+                  <span className={`badge ${event.categoryColor} text-xs font-lato font-bold px-3 py-1`}>
                     {event.category}
                   </span>
                 </div>
                 {/* Google Photos link */}
                 <a
                   href={event.photosLink}
-                  className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-body px-3 py-1 rounded-full hover:bg-white/30 transition-colors flex items-center gap-1.5"
+                  className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-lato px-3 py-1 rounded-full hover:bg-white/30 transition-colors flex items-center gap-1.5"
                 >
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
                   Photos
@@ -100,9 +100,9 @@ export default function Events() {
 
               {/* Event content */}
               <div className="p-6">
-                <h3 className="font-display font-bold text-xl text-forest-800 mb-2">{event.title}</h3>
+                <h3 className="font-playfair font-bold text-xl text-forest mb-2">{event.title}</h3>
 
-                <div className="flex flex-wrap gap-4 text-sm font-body text-gray-500 mb-3">
+                <div className="flex flex-wrap gap-4 text-sm font-lato text-gray-500 mb-3">
                   <span className="flex items-center gap-1.5">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     {event.date}
@@ -113,20 +113,20 @@ export default function Events() {
                   </span>
                 </div>
 
-                <div className="flex items-center gap-1.5 text-sm font-body text-gray-400 mb-4">
+                <div className="flex items-center gap-1.5 text-sm font-lato text-gray-400 mb-4">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                   {event.location}
                 </div>
 
-                <p className="font-body text-sm text-gray-500 leading-relaxed mb-5">{event.desc}</p>
+                <p className="font-lato text-sm text-gray-500 leading-relaxed mb-5">{event.desc}</p>
 
                 <div className="flex items-center justify-between">
-                  <span className={`text-sm font-body font-bold ${event.spotsColor}`}>
+                  <span className={`text-sm font-lato font-bold ${event.spotsColor}`}>
                     {event.spots}
                   </span>
                   <a
                     href="#register"
-                    className="inline-flex items-center gap-2 bg-forest-600 text-cream font-body font-bold text-sm px-5 py-2.5 rounded-full hover:bg-forest-700 transition-colors"
+                    className="inline-flex items-center gap-2 bg-forest text-cream font-lato font-bold text-sm px-5 py-2.5 rounded-full hover:bg-forest/90 transition-colors"
                   >
                     Register
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -139,7 +139,7 @@ export default function Events() {
 
         {/* Full calendar CTA */}
         <div className="text-center mt-12 animate-on-scroll">
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest-300 text-forest-700 font-body font-bold px-8 py-3 rounded-full hover:bg-forest-50 transition-colors">
+          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest/30 text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-forest/5 transition-colors">
             View Full Semester Calendar
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
