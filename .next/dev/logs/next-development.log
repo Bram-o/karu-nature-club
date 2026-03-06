@@ -1,0 +1,8 @@
+[00:00:01.300] Server  LOG     ✓ Ready in 813ms
+[00:01:49.893] Server  ERROR   ⨯ ReferenceError: s is not defined
+[00:01:50.117] Server  ERROR   ⨯ ReferenceError: s is not defined
+[00:01:51.610] Browser ERROR   uncaughtError: ReferenceError: s is not defined
+[00:02:19.416] Server  LOG     ✓ Compiled in 103ms
+[00:02:19.530] Server  WARN    ⚠ Unsupported metadata themeColor is configured in metadata export in /. Please move it to viewport export instead.
+Read more: https://nextjs.org/docs/app/api-reference/functions/generate-viewport
+[00:02:20.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

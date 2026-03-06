@@ -16,8 +16,6 @@ export default function Home() {
   return (
     <>
       <Preloader />
-      <ScrollAnimations />
-      <FloatingButtons />
       <Navbar />
       <main>
         <HeroCarousel />
@@ -26,10 +24,12 @@ export default function Home() {
         <Team />
         <Events />
         <Gallery />
-        <Registration />
         <Blog />
+        <Registration />
       </main>
       <Footer />
+      <FloatingButtons />
+      <ScrollAnimations />
     </>
   )
 }
