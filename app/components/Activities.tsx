@@ -1,11 +1,11 @@
 'use client'
-import { useState } from 'react'
 
 const subCommittees = [
   {
     id: 1,
     name: 'Hikes & Adventure',
     icon: '🏔️',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80',
     color: 'bg-emerald-50 border-emerald-200',
     accentColor: 'text-emerald-700',
     leader: 'Jane Wanjiku',
@@ -18,6 +18,7 @@ const subCommittees = [
     id: 2,
     name: 'Conservation & Environment',
     icon: '🌿',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80',
     color: 'bg-green-50 border-green-200',
     accentColor: 'text-green-700',
     leader: 'Peter Kamau',
@@ -30,6 +31,7 @@ const subCommittees = [
     id: 3,
     name: 'Team Building',
     icon: '🤝',
+    image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=80',
     color: 'bg-teal-50 border-teal-200',
     accentColor: 'text-teal-700',
     leader: 'Sarah Njeri',
@@ -42,6 +44,7 @@ const subCommittees = [
     id: 4,
     name: 'Wildlife & Birding',
     icon: '🦅',
+    image: 'https://images.unsplash.com/photo-1484406566174-9da000fda645?w=400&q=80',
     color: 'bg-amber-50 border-amber-200',
     accentColor: 'text-amber-700',
     leader: 'David Mwangi',
@@ -54,6 +57,7 @@ const subCommittees = [
     id: 5,
     name: 'Photography & Media',
     icon: '📸',
+    image: 'https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=400&q=80',
     color: 'bg-blue-50 border-blue-200',
     accentColor: 'text-blue-700',
     leader: 'Grace Muthoni',
@@ -66,6 +70,7 @@ const subCommittees = [
     id: 6,
     name: 'Community Outreach',
     icon: '🌍',
+    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=400&q=80',
     color: 'bg-purple-50 border-purple-200',
     accentColor: 'text-purple-700',
     leader: 'James Gitonga',
@@ -78,6 +83,7 @@ const subCommittees = [
     id: 7,
     name: 'Research & Innovation',
     icon: '🔬',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80',
     color: 'bg-rose-50 border-rose-200',
     accentColor: 'text-rose-700',
     leader: 'Mary Wambui',
@@ -89,8 +95,6 @@ const subCommittees = [
 ]
 
 export default function Activities() {
-  const [active, setActive] = useState<number | null>(null)
-
   return (
     <section id="activities" className="py-24 bg-forest relative overflow-hidden">
       {/* Background pattern */}
@@ -128,29 +132,31 @@ export default function Activities() {
 
         {/* Committee grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-on-scroll">
-          {subCommittees.map((committee) => (
+          {subCommittees.slice(0, 3).map((committee) => (
             <div
               key={committee.id}
-              className={`bg-white rounded-2xl overflow-hidden card-hover cursor-pointer border ${
-                active === committee.id ? 'ring-2 ring-moss' : 'border-transparent'
-              }`}
-              onClick={() => setActive(active === committee.id ? null : committee.id)}
+              onClick={() => window.location.href = `/activities/${committee.id}`}
+              className="bg-white rounded-2xl overflow-hidden card-hover border border-transparent hover:border-moss/30 transition-all duration-300 cursor-pointer"
             >
-              <div className={`p-6 ${committee.color} border-b`}>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-3xl">{committee.icon}</span>
-                  <span className={`badge ${committee.accentColor} bg-white/60 text-xs`}>
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={committee.image}
+                  alt={committee.name}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute top-4 left-4">
+                  <span className={`badge ${committee.accentColor} bg-white/90 text-xs font-lato font-bold px-3 py-1`}>
                     #{committee.id}
                   </span>
                 </div>
-                <h3 className={`font-playfair font-bold text-lg ${committee.accentColor}`}>
-                  {committee.name}
-                </h3>
               </div>
 
-              <div className="p-6">
-                {/* Leader */}
-                <div className="flex items-center gap-3 mb-4">
+              <div className={`p-6 ${committee.color} border-b`}>
+                <h3 className={`font-playfair font-bold text-lg ${committee.accentColor} mb-2`}>
+                  {committee.name}
+                </h3>
+                <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-bold text-sm font-lato">
                     {committee.avatar}
                   </div>
@@ -159,34 +165,35 @@ export default function Activities() {
                     <p className="font-lato text-xs text-gray-400">{committee.role}</p>
                   </div>
                 </div>
+              </div>
 
-                <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4">
+              <div className="p-6">
+                <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4 line-clamp-3">
                   {committee.desc}
                 </p>
-
-                {/* Expanded activities */}
-                {active === committee.id && (
-                  <div className="border-t border-gray-100 pt-4 mt-2">
-                    <p className="font-lato text-xs font-bold uppercase tracking-widest text-gray-400 mb-3">Key Activities</p>
-                    <div className="flex flex-wrap gap-2">
-                      {committee.activities.map((act) => (
-                        <span key={act} className="text-xs font-lato font-medium bg-forest/5 text-forest border border-forest/20 px-3 py-1 rounded-full">
-                          {act}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                <button className={`mt-4 text-xs font-lato font-bold ${committee.accentColor} flex items-center gap-1 hover:gap-2 transition-all`}>
-                  {active === committee.id ? 'Show less' : 'View details'}
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d={active === committee.id ? 'M18 15l-6-6-6 6' : 'M6 9l6 6 6-6'} />
-                  </svg>
-                </button>
+                <div className="flex flex-wrap gap-2">
+                  {committee.activities.slice(0, 2).map((act) => (
+                    <span key={act} className="text-xs font-lato font-medium bg-forest/5 text-forest border border-forest/20 px-3 py-1 rounded-full">
+                      {act}
+                    </span>
+                  ))}
+                  {committee.activities.length > 2 && (
+                    <span className="text-xs font-lato font-medium bg-forest/5 text-forest border border-forest/20 px-3 py-1 rounded-full">
+                      +{committee.activities.length - 2} more
+                    </span>
+                  )}
+                </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View all activities CTA */}
+        <div className="text-center mt-12 animate-on-scroll">
+          <a href="/activities" className="inline-flex items-center gap-2 bg-moss text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-moss/90 transition-colors">
+            View All Activities
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>

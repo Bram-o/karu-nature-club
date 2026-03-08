@@ -1,13 +1,15 @@
 'use client'
 
 const galleryImages = [
-  { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80', alt: 'Mt. Kenya Hike', span: 'col-span-2 row-span-2' },
-  { src: 'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=400&q=80', alt: 'Bird watching' },
-  { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400&q=80', alt: 'Forest trail' },
-  { src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80', alt: 'Nature walk' },
-  { src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80', alt: 'Camping' },
-  { src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80', alt: 'Tree planting' },
-  { src: 'https://images.unsplash.com/photo-1475598322381-f1b499717dda?w=400&q=80', alt: 'Wildlife' },
+  { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80', alt: 'Mt. Kenya Hike', span: 'col-span-2 row-span-2', photoLink: 'https://photos.app.goo.gl/ZFSH1S4g5aChpDeAA' },
+  { src: 'https://images.unsplash.com/photo-1544984243-ec57ea16fe25?w=400&q=80', alt: 'Itundu Waterfalls', photoLink: 'https://photos.app.goo.gl/3UKSfAcdytTybpx36' },
+  { src: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=400&q=80', alt: 'Upendo Rescue Centre Visit', photoLink: 'https://photos.app.goo.gl/X7f2BE4vcF9nFXnm6' },
+  { src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&q=80', alt: 'Gitunduti Cleanup Drive', photoLink: 'https://photos.app.goo.gl/Unps3Q94Mi4fFdDbA' },
+  { src: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=400&q=80', alt: 'World Wetlands Day', photoLink: 'https://photos.app.goo.gl/6qDbwgi2eUtKbUEZ8' },
+  { src: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80', alt: 'Itiati Team Building', photoLink: 'https://photos.app.goo.gl/3c6Fg1iW5kSuof226' },
+  { src: 'https://images.unsplash.com/photo-1475598322381-f1b499717dda?w=400&q=80', alt: 'Wednesday Weekly Meetings', photoLink: 'https://photos.app.goo.gl/JQ7HbFmF92nXbEHD6' },
+  { src: 'https://images.unsplash.com/photo-1475598322381-f1b499717dda?w=400&q=80', alt: 'Nyambene Hills Hike', photoLink: 'https://photos.app.goo.gl/dGEpzz4zdzMeAfad6' },
+  { src: 'https://images.unsplash.com/photo-1475598322381-f1b499717dda?w=400&q=80', alt: 'Good Faith Childrens Home', photoLink: 'https://photos.app.goo.gl/iFe9gJBwjqDYEXx98' },
 ]
 
 export default function Gallery() {
@@ -30,8 +32,11 @@ export default function Gallery() {
         {/* Grid gallery */}
         <div className="grid grid-cols-3 md:grid-cols-4 gap-3 animate-on-scroll">
           {galleryImages.map((img, i) => (
-            <div
+            <a
               key={i}
+              href={img.photoLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className={`relative overflow-hidden rounded-xl group cursor-pointer ${img.span || ''}`}
               style={{ aspectRatio: img.span ? '1' : '1' }}
             >
@@ -40,27 +45,17 @@ export default function Gallery() {
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="font-lato text-sm text-cream font-medium">{img.alt}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="flex flex-col items-center gap-2">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-cream"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                  <p className="font-lato text-sm text-cream font-medium">{img.alt}</p>
+                </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
-        {/* Google Photos CTA */}
-        <div className="text-center mt-12 animate-on-scroll">
-          <a
-            href="https://photos.google.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-white/10 hover:bg-white/20 border border-white/20 text-cream font-lato font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13v6l5 3-1 1.73L9 14V7h2z"/>
-            </svg>
-            View Full Gallery on Google Photos
-          </a>
-        </div>
+        
       </div>
     </section>
   )

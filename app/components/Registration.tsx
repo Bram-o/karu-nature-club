@@ -18,7 +18,6 @@ export default function Registration() {
 
   const resources = [
     { name: 'Club Constitution 2024.pdf', size: '340 KB', icon: '📄' },
-    { name: 'Member Handbook.pdf', size: '1.2 MB', icon: '📖' },
     { name: 'Hike Safety Guidelines.pdf', size: '210 KB', icon: '⛑️' },
     { name: 'Conservation Charter.pdf', size: '480 KB', icon: '🌿' },
   ]
@@ -58,7 +57,7 @@ export default function Registration() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Full Name *</label>
+                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Full Name *</label>
                       <input
                         type="text"
                         name="fullName"
@@ -66,25 +65,25 @@ export default function Registration() {
                         value={form.fullName}
                         onChange={handleChange}
                         placeholder="John Kamau"
-                        className="w-full border border-gray-200 rounded-xl px-4 py-3 font-lato text-sm text-gray-800 placeholder:text-gray-300"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3 font-lato text-sm text-gray placeholder:text-gray-300"
                       />
                     </div>
                     <div>
-                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Reg. Number *</label>
+                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Reg. Number *</label>
                       <input
                         type="text"
                         name="regNumber"
                         required
                         value={form.regNumber}
                         onChange={handleChange}
-                        placeholder="KU/2022/00123"
+                        placeholder="E10O/2022F/29"
                         className="w-full border border-gray-200 rounded-xl px-4 py-3 font-lato text-sm text-gray-800 placeholder:text-gray-300"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Email Address *</label>
+                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Email Address *</label>
                     <input
                       type="email"
                       name="email"
@@ -92,13 +91,13 @@ export default function Registration() {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="john@student.karu.ac.ke"
-                      className="w-full border border-gray-200 rounded-xl px-4 py-3 font-lato text-sm text-gray-800 placeholder:text-gray-300"
+                      className="w-full border border-gray-200 rounded-xl px-4 py-3 font-lato text-sm text-black-800 placeholder:text-gray-300"
                     />
                   </div>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Phone *</label>
+                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-bblack mb-1.5">Phone *</label>
                       <input
                         type="tel"
                         name="phone"
@@ -110,7 +109,7 @@ export default function Registration() {
                       />
                     </div>
                     <div>
-                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Year of Study *</label>
+                      <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Year of Study *</label>
                       <select
                         name="year"
                         required
@@ -127,7 +126,7 @@ export default function Registration() {
                   </div>
 
                   <div>
-                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-1.5">Preferred Sub-Committee</label>
+                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Preferred Sub-Committee</label>
                     <select
                       name="committee"
                       value={form.committee}
@@ -143,7 +142,7 @@ export default function Registration() {
 
                   {/* Payment options */}
                   <div>
-                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Payment Method (Ksh 200 / semester)</label>
+                    <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-3">Payment Method (Ksh 200 / semester)</label>
                     <div className="grid grid-cols-2 gap-3">
                       {[
                         { id: 'mpesa', label: 'M-Pesa', detail: 'Pay Bill: 123456', icon: '📱' },
@@ -181,7 +180,6 @@ export default function Registration() {
                 {[
                   'Full access to all club activities and events',
                   'Priority registration for limited hikes & trips',
-                  'Official KarU Nature Club member t-shirt',
                   'Access to member-only resources & guides',
                   'Certificate of membership for your portfolio',
                   'WhatsApp communication group access',

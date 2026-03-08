@@ -12,7 +12,7 @@ const events = [
     spots: '25 spots left',
     spotsColor: 'text-amber-600',
     image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=400&q=80',
-    photosLink: '#',
+    photosLink: 'https://photos.app.goo.gl/ZFSH1S4g5aChpDeAA',
   },
   {
     title: 'Earth Day Tree Planting',
@@ -25,7 +25,7 @@ const events = [
     spots: 'Open to all',
     spotsColor: 'text-green-600',
     image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&q=80',
-    photosLink: '#',
+    photosLink: 'https://photos.app.goo.gl/6qDbwgi2eUtKbUEZ8',
   },
   {
     title: 'Bird Watching Safari',
@@ -57,7 +57,7 @@ const events = [
 
 export default function Events() {
   return (
-    <section id="events" className="py-24 bg-white relative">
+    <section id="events" className="py-24 bg-lime-50 relative">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
@@ -72,9 +72,9 @@ export default function Events() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
-          {events.map((event, i) => (
-            <div key={i} className="card-hover bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 animate-on-scroll">
+          {events.slice(0, 3).map((event, i) => (
+            <div key={i} onClick={() => window.location.href = `/events/${i + 1}`} className="card-hover bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm block hover:shadow-lg transition-shadow cursor-pointer">
               {/* Event image */}
               <div className="relative h-44 overflow-hidden">
                 <img
@@ -89,13 +89,16 @@ export default function Events() {
                   </span>
                 </div>
                 {/* Google Photos link */}
-                <a
-                  href={event.photosLink}
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(event.photosLink, '_blank');
+                  }}
                   className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-lato px-3 py-1 rounded-full hover:bg-white/30 transition-colors flex items-center gap-1.5"
                 >
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
                   Photos
-                </a>
+                </button>
               </div>
 
               {/* Event content */}
@@ -124,23 +127,26 @@ export default function Events() {
                   <span className={`text-sm font-lato font-bold ${event.spotsColor}`}>
                     {event.spots}
                   </span>
-                  <a
-                    href="#register"
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                     className="inline-flex items-center gap-2 bg-forest text-cream font-lato font-bold text-sm px-5 py-2.5 rounded-full hover:bg-forest/90 transition-colors"
                   >
                     Register
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Full calendar CTA */}
+        {/* View all events CTA */}
         <div className="text-center mt-12 animate-on-scroll">
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest/30 text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-forest/5 transition-colors">
-            View Full Semester Calendar
+          <a href="/events" className="inline-flex items-center gap-2 bg-moss text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-moss/90 transition-colors">
+            View All Events
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>

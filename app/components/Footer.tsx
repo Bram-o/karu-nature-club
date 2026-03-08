@@ -9,12 +9,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-moss/20 border border-moss/30 flex items-center justify-center">
-                <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 4C24 4 8 16 8 28C8 36.837 15.163 44 24 44C32.837 44 40 36.837 40 28C40 16 24 4 24 4Z" fill="#97BC62" />
-                  <path d="M24 10C24 10 24 32 24 44" stroke="#2C5F2D" strokeWidth="2.5" strokeLinecap="round" />
-                </svg>
-              </div>
+            <div className="w-12 h-12 flex items-center justify-center">
+              <img src="/logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
+            </div>
               <div>
                 <p className="font-playfair font-bold text-cream">KarU Nature Club</p>
                 <p className="font-lato text-xs text-moss tracking-widest uppercase">Karatina University</p>
@@ -107,8 +104,8 @@ export default function Footer() {
               <p className="font-lato text-xs font-bold uppercase tracking-widest text-moss mb-3">Club Hours</p>
               <p className="font-lato text-xs text-cream/60 leading-relaxed">
                 Monday – Friday<br />
-                <span className="text-cream/80">12:00 PM – 2:00 PM</span><br />
-                Student Center, Block B, Room 14
+                <span className="text-cream/80">5:00 PM – 6:00 PM</span><br />
+                Tuition Block, CF1
               </p>
             </div>
           </div>

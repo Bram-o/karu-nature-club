@@ -56,7 +56,7 @@ const testimonials = [
 
 export default function Blog() {
   return (
-    <section id="blog" className="py-24 bg-gray-50 relative">
+    <section id="blog" className="py-24 bg-teal-50 relative">
       <div className="max-w-7xl mx-auto px-6">
         {/* Blog */}
         <div className="mb-20">
@@ -72,7 +72,7 @@ export default function Blog() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
             {posts.map((post, i) => (
-              <article key={i} className="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+              <a key={i} href={`/blog/${i + 1}`} className="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 block hover:shadow-lg transition-shadow">
                 <div className="h-44 overflow-hidden">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
@@ -93,7 +93,7 @@ export default function Blog() {
                     <span className="font-lato text-xs text-gray-400">{post.date}</span>
                   </div>
                 </div>
-              </article>
+              </a>
             ))}
           </div>
         </div>

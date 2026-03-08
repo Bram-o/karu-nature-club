@@ -1,17 +1,17 @@
 'use client'
 
 const team = [
-  { name: 'Alex Kariuki', role: 'Club President', avatar: 'AK', color: 'bg-forest/10', twitter: '#', linkedin: '#' },
-  { name: 'Brenda Wanjiru', role: 'Vice President', avatar: 'BW', color: 'bg-moss/20', twitter: '#', linkedin: '#' },
-  { name: 'Collins Mugo', role: 'Secretary General', avatar: 'CM', color: 'bg-earth/20', twitter: '#', linkedin: '#' },
-  { name: 'Diana Njoki', role: 'Treasurer', avatar: 'DN', color: 'bg-blue-100', twitter: '#', linkedin: '#' },
-  { name: 'Edwin Mwenda', role: 'Publicity & Media', avatar: 'EM', color: 'bg-amber-100', twitter: '#', linkedin: '#' },
-  { name: 'Faith Wanjiku', role: 'Events Coordinator', avatar: 'FW', color: 'bg-rose-100', twitter: '#', linkedin: '#' },
+  { name: 'Alex Kariuki', role: 'Club President', avatar: 'AK', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80', color: 'bg-forest/10', twitter: '#', linkedin: '#' },
+  { name: 'Brenda Wanjiru', role: 'Vice President', avatar: 'BW', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80', color: 'bg-moss/20', twitter: '#', linkedin: '#' },
+  { name: 'Collins Mugo', role: 'Secretary General', avatar: 'CM', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80', color: 'bg-earth/20', twitter: '#', linkedin: '#' },
+  { name: 'Diana Njoki', role: 'Treasurer', avatar: 'DN', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80', color: 'bg-blue-100', twitter: '#', linkedin: '#' },
+  { name: 'Edwin Mwenda', role: 'Publicity & Media', avatar: 'EM', image: 'https://images.unsplash.com/photo-1516794653033-07e32f4aef01?w=400&q=80', color: 'bg-amber-100', twitter: '#', linkedin: '#' },
+  { name: 'Faith Wanjiku', role: 'Events Coordinator', avatar: 'FW', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80', color: 'bg-rose-100', twitter: '#', linkedin: '#' },
 ]
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 bg-cream relative overflow-hidden">
+    <section id="team" className="py-24 bg-emerald-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
@@ -29,9 +29,20 @@ export default function Team() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 animate-on-scroll">
           {team.map((member, i) => (
             <div key={i} className="card-hover text-center group">
-              {/* Avatar */}
-              <div className={`w-20 h-20 mx-auto rounded-2xl ${member.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
-                <span className="font-playfair font-bold text-xl text-forest">{member.avatar}</span>
+              {/* Avatar with Image */}
+              <div className={`w-20 h-20 mx-auto rounded-2xl overflow-hidden mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                <img 
+                  src={member.image} 
+                  alt={member.name}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <div className={`w-20 h-20 ${member.color} flex items-center justify-center hidden`}>
+                  <span className="font-playfair font-bold text-xl text-forest">{member.avatar}</span>
+                </div>
               </div>
               <h4 className="font-playfair font-bold text-sm text-forest mb-1">{member.name}</h4>
               <p className="font-lato text-xs text-gray-400 mb-3">{member.role}</p>
@@ -50,7 +61,7 @@ export default function Team() {
 
         {/* Full team CTA */}
         <div className="text-center mt-12 animate-on-scroll">
-          <a href="#" className="inline-flex items-center gap-2 border-2 border-forest/30 text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-forest/5 transition-colors">
+          <a href="/team" className="inline-flex items-center gap-2 border-2 border-forest/30 text-forest font-lato font-bold px-8 py-3 rounded-full hover:bg-forest/5 transition-colors">
             View All Members
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
