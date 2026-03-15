@@ -92,6 +92,32 @@ const subCommittees = [
     desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
     activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
   },
+  {
+    id: 8,
+    name: 'Research & Innovation',
+    icon: '🔬',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80',
+    color: 'bg-rose-50 border-rose-200',
+    accentColor: 'text-rose-700',
+    leader: 'Mary Wambui',
+    role: 'Chairperson',
+    avatar: 'MW',
+    desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
+    activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
+  },
+  {
+    id: 9,
+    name: 'Research & Innovation',
+    icon: '🔬',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&q=80',
+    color: 'bg-rose-50 border-rose-200',
+    accentColor: 'text-rose-700',
+    leader: 'Mary Wambui',
+    role: 'Chairperson',
+    avatar: 'MW',
+    desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
+    activities: ['Field Research', 'Data Collection', 'Eco-Innovation', 'Annual Reports'],
+  },
 ]
 
 export default function AllActivities() {
@@ -126,7 +152,7 @@ export default function AllActivities() {
           </h1>
           <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
           <p className="font-lato text-lg text-cream/70 max-w-2xl mx-auto">
-            Explore all seven dedicated committees driving our mission — each led by passionate students committed to their focus area.
+            Explore all nine dedicated committees driving our mission — each led by passionate students committed to their focus area.
           </p>
         </div>
 
@@ -157,9 +183,17 @@ export default function AllActivities() {
                   {committee.name}
                 </h3>
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-bold text-sm font-lato">
-                    {committee.avatar}
-                  </div>
+                  {committee.profilePic ? (
+                    <img
+                      src={committee.profilePic}
+                      alt={`Photo of ${committee.leader}`}
+                      className="w-9 h-9 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="w-9 h-9 rounded-full bg-forest/10 flex items-center justify-center text-forest font-bold text-sm font-lato">
+                      {committee.avatar}
+                    </div>
+                  )}
                   <div>
                     <p className="font-lato font-bold text-sm text-gray-800">{committee.leader}</p>
                     <p className="font-lato text-xs text-gray-400">{committee.role}</p>

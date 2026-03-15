@@ -13,16 +13,22 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ]
 
+const BANNER_HEIGHT = 40 // px — matches banner's py-2 + text height
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeLink, setActiveLink] = useState('home')
+  const [bannerVisible, setBannerVisible] = useState(true)
+  const [bannerHeight, setBannerHeight] = useState(0)
 
+
+  
+  
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 60)
-      
-      // Update active link based on scroll position
+      setScrolled(window.scrollY > BANNER_HEIGHT)
+
       const sections = navLinks.map(link => link.href.slice(1))
       for (const section of sections) {
         const element = document.getElementById(section)
@@ -35,22 +41,39 @@ export default function Navbar() {
         }
       }
     }
-    
+
+    // Listen for banner dismissal from FloatingButtons
+    const handleDismiss = () => {
+      setBannerVisible(false)
+    }
+
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+    window.addEventListener('announcementDismissed', handleDismiss)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('announcementDismissed', handleDismiss)
+    }
   }, [])
+
+  // When not scrolled: sit just below the banner (or at top-0 if banner dismissed)
+  // When scrolled: always snap to top-0
+  const navTop = scrolled
+    ? 'top-0'
+    : bannerVisible
+      ? `top-[${BANNER_HEIGHT}px]`
+      : 'top-0'
 
   return (
     <nav
       className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'top-0 nav-glass shadow-lg shadow-forest/20'
-          : 'top-8 bg-transparent'
-      }`}
+          ? 'nav-glass shadow-lg shadow-forest/20'
+          : 'bg-transparent'
+      } ${navTop}`}
     >
+      {/* rest of your nav JSX unchanged... */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
-          {/* Logo */}
           <a href="#home" className="flex items-center gap-2 group">
             <div className="w-20 h-20 flex items-center justify-center">
               <img src="/logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
@@ -65,7 +88,6 @@ export default function Navbar() {
             </div>
           </a>
 
-          {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link) => (
               <a
@@ -86,7 +108,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Mobile hamburger */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-2 rounded-md hover:bg-white/10 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -99,7 +120,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div className={`lg:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="bg-forest/97 backdrop-blur-xl border-t border-moss/20 px-4 py-4 space-y-1">
           {navLinks.map((link) => (

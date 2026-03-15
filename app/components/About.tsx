@@ -2,32 +2,38 @@
 
 const whyJoin = [
   {
-    image: 'https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=600&q=80',
+    image: '/about/hiking_and_adventure.jpeg',
+    objectPosition: 'top',
     title: 'Adventure & Hikes',
     desc: 'Scale Mt. Kenya and explore Kenya\'s most stunning trails with a community of passionate hikers.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1501514280392-834092f0afc7?w=600&q=80',
+    image: '/about/conservation.jpeg',
+    objectPosition: 'bottom',
     title: 'Conservation Impact',
     desc: 'Lead real environmental change through tree planting, clean-up drives, and conservation education.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&q=80',
+    image: '/about/leadership.jpeg',
+    objectPosition: 'center',
     title: 'Leadership Growth',
     desc: 'Develop leadership, teamwork, and communication skills through our structured sub-committees.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1496795325211-dc151e304a2c?w=600&q=80',
+    image: '/about/nature_photography.jpeg',
+    objectPosition: 'top',
     title: 'Nature Photography',
     desc: 'Capture the beauty of Kenya\'s biodiversity and share your perspective with the world.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1495366554755-2a75613608c4?w=600&q=80',
+    image: '/about/community.jpeg',
+    objectPosition: 'center',
     title: 'Community Network',
     desc: 'Connect with like-minded students, alumni, and environmental professionals across Kenya.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1581093588401-04cb01cc8a4c?w=600&q=80',
+    image: '/about/certificates_and_awards.jpeg',
+    objectPosition: 'bottom',
     title: 'Certificates & Awards',
     desc: 'Earn recognition for your contributions and boost your professional portfolio.',
   },
@@ -82,7 +88,7 @@ export default function About() {
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl shadow-forest/20">
               <img
-                src="ahttps://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80"
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80"
                 alt="Nature landscape"
                 className="w-full h-72 object-cover"
               />
@@ -112,7 +118,11 @@ export default function About() {
               >
                 {/* image top half */}
                 <div className="h-40 w-full overflow-hidden">
-                  <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className={`w-full h-full object-cover ${item.objectPosition ? `object-${item.objectPosition}` : ''}`}
+                  />
                 </div>
                 <div className="p-6">
                   <h4 className="font-playfair font-bold text-lg text-forest mb-2">{item.title}</h4>

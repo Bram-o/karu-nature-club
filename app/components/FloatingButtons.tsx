@@ -13,9 +13,13 @@ export default function FloatingButtons() {
 
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
+  const handleDismiss = () => {
+    setShowAnnouncement(false)
+    window.dispatchEvent(new CustomEvent('announcementDismissed'))
+  }
+
   return (
     <>
-      {/* Admin announcement banner */}
       {showAnnouncement && (
         <div className="announcement-banner fixed top-0 left-0 right-0 z-[60] bg-moss text-forest px-4 py-2 flex items-center justify-between shadow-md">
           <p className="font-lato text-xs font-bold flex items-center gap-2">
@@ -24,7 +28,7 @@ export default function FloatingButtons() {
             <a href="#register" className="underline hover:no-underline ml-1">Register now →</a>
           </p>
           <button
-            onClick={() => setShowAnnouncement(false)}
+            onClick={handleDismiss}
             className="ml-4 text-forest hover:text-forest/80 font-bold text-lg leading-none"
             aria-label="Close announcement"
           >
@@ -33,7 +37,7 @@ export default function FloatingButtons() {
         </div>
       )}
 
-      {/* Floating WhatsApp */}
+
       <a
         href="https://wa.me/254712345678"
         target="_blank"
@@ -48,7 +52,7 @@ export default function FloatingButtons() {
         </div>
       </a>
 
-      {/* Back to top */}
+
       <button
         onClick={scrollToTop}
         className={`back-to-top ${!showTop ? 'hidden' : ''}`}

@@ -1,12 +1,12 @@
 'use client'
 
 const team = [
-  { name: 'Alex Kariuki', role: 'Club President', avatar: 'AK', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80', color: 'bg-forest/10', twitter: '#', linkedin: '#' },
-  { name: 'Brenda Wanjiru', role: 'Vice President', avatar: 'BW', image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80', color: 'bg-moss/20', twitter: '#', linkedin: '#' },
-  { name: 'Collins Mugo', role: 'Secretary General', avatar: 'CM', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80', color: 'bg-earth/20', twitter: '#', linkedin: '#' },
-  { name: 'Diana Njoki', role: 'Treasurer', avatar: 'DN', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80', color: 'bg-blue-100', twitter: '#', linkedin: '#' },
-  { name: 'Edwin Mwenda', role: 'Publicity & Media', avatar: 'EM', image: 'https://images.unsplash.com/photo-1516794653033-07e32f4aef01?w=400&q=80', color: 'bg-amber-100', twitter: '#', linkedin: '#' },
-  { name: 'Faith Wanjiku', role: 'Events Coordinator', avatar: 'FW', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80', color: 'bg-rose-100', twitter: '#', linkedin: '#' },
+  { name: 'Mark Lairenge', role: 'Club President', avatar: 'ML', image: '#', color: 'bg-forest/10', email: '#', linkedin: '#' },
+  { name: 'Faith Mumbi', role: 'Vice President', avatar: 'FM', image: '#', color: 'bg-moss/20', email: '#', linkedin: '#' },
+  { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '#', color: 'bg-earth/20', email: '#', linkedin: '#' },
+  { name: 'David mugo', role: 'Treasurer', avatar: 'DM', image: '#', color: 'bg-blue-100', email: '#', linkedin: '#' },
+  { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '#', color: 'bg-amber-100', email: '#', linkedin: '#' },
+  { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '#', color: 'bg-rose-100', email: '#', linkedin: '#' },
 ]
 
 export default function Team() {
@@ -48,8 +48,8 @@ export default function Team() {
               <p className="font-lato text-xs text-gray-400 mb-3">{member.role}</p>
               {/* Social icons */}
               <div className="flex justify-center gap-2">
-                <a href={member.twitter} className="w-7 h-7 rounded-full bg-gray-100 hover:bg-sky-100 hover:text-sky-600 flex items-center justify-center transition-colors">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.741l7.74-8.86L2.25 2.25h6.93l4.25 5.635zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <a href={member.email} className="w-7 h-7 rounded-full bg-gray-100 hover:bg-gray-200 hover:text-gray-700 flex items-center justify-center transition-colors">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </a>
                 <a href={member.linkedin} className="w-7 h-7 rounded-full bg-gray-100 hover:bg-blue-100 hover:text-blue-600 flex items-center justify-center transition-colors">
                   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
