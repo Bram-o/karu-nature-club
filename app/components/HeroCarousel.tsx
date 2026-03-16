@@ -73,7 +73,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-24 md:py-36">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-48 md:py-36">
         <div className="max-w-2xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-moss/20 border border-moss/30 text-moss px-4 py-1.5 rounded-full text-sm font-lato font-medium mb-6 backdrop-blur-sm">
@@ -111,7 +111,7 @@ export default function HeroCarousel() {
             >
               {slide.cta}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
             <a
@@ -130,9 +130,8 @@ export default function HeroCarousel() {
           <button
             key={i}
             onClick={() => goTo(i)}
-            className={`transition-all duration-300 rounded-full ${
-              i === current ? 'w-8 h-2.5 bg-moss' : 'w-2.5 h-2.5 bg-cream/40 hover:bg-cream/60'
-            }`}
+            className={`transition-all duration-300 rounded-full ${i === current ? 'w-8 h-2.5 bg-moss' : 'w-2.5 h-2.5 bg-cream/40 hover:bg-cream/60'
+              }`}
           />
         ))}
       </div>
@@ -145,17 +144,17 @@ export default function HeroCarousel() {
 
       {/* Stats bar */}
       <div className="absolute bottom-0 left-0 right-0 z-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-forest/80 backdrop-blur-md border-t border-moss/20 px-8 py-4 rounded-t-2xl flex flex-wrap gap-8 justify-around">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="bg-forest/80 backdrop-blur-md border-t border-moss/20 px-4 py-3 sm:px-8 sm:py-4 rounded-t-2xl flex flex-wrap gap-4 sm:gap-8 justify-around">
             {[
               { value: '500+', label: 'Active Members' },
               { value: '9', label: 'Sub-Committees' },
               { value: '10+', label: 'Events Per Year' },
-              { value: '2019', label: 'Founded' },
+              { value: '2012', label: 'Founded' },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-playfair font-bold text-2xl text-moss">{stat.value}</div>
-                <div className="font-lato text-xs text-cream/60 tracking-wide uppercase">{stat.label}</div>
+                <div className="font-playfair font-bold text-xl sm:text-2xl text-moss">{stat.value}</div>
+                <div className="font-lato text-[10px] sm:text-xs text-cream/60 tracking-wide uppercase">{stat.label}</div>
               </div>
             ))}
           </div>

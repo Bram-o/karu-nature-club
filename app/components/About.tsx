@@ -75,12 +75,12 @@ export default function About() {
             <p className="font-lato text-gray-600 leading-relaxed mb-6">
               Our mission is to inspire, educate, and empower the KarU community to appreciate, protect, and sustainably interact with the natural environment — from the slopes of Mt. Kenya to the forests of Aberdare.
             </p>
-            <div className="flex gap-4">
-              <a href="#activities" className="inline-flex items-center gap-2 bg-forest text-cream font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/90 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a href="#activities" className="justify-center inline-flex items-center gap-2 bg-forest text-cream font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/90 transition-colors">
                 Our Activities
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
-              <a href="#register" className="inline-flex items-center gap-2 border-2 border-forest text-forest font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/5 transition-colors">
+              <a href="#register" className="justify-center inline-flex items-center gap-2 border-2 border-forest text-forest font-lato font-bold px-6 py-3 rounded-full hover:bg-forest/5 transition-colors">
                 Join Us
               </a>
             </div>

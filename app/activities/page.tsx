@@ -183,9 +183,9 @@ export default function AllActivities() {
                   {committee.name}
                 </h3>
                 <div className="flex items-center gap-3">
-                  {committee.profilePic ? (
+                  {('profilePic' in committee && (committee as any).profilePic) ? (
                     <img
-                      src={committee.profilePic}
+                      src={(committee as any).profilePic}
                       alt={`Photo of ${committee.leader}`}
                       className="w-9 h-9 rounded-full object-cover"
                     />
@@ -220,7 +220,7 @@ export default function AllActivities() {
         {/* Back button */}
         <div className="text-center mt-16">
           <a href="/#activities" className="inline-flex items-center gap-2 border-2 border-moss text-moss font-lato font-bold px-8 py-3 rounded-full hover:bg-moss/10 transition-colors">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
             Back to Home
           </a>
         </div>

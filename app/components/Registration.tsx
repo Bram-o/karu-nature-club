@@ -23,8 +23,8 @@ export default function Registration() {
   ]
 
   return (
-    <section id="register" className="py-24 bg-cream relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="register" className="py-24 pb-32 sm:pb-24 bg-cream relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-16 animate-on-scroll">
           <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
             Join the Club
@@ -41,7 +41,7 @@ export default function Registration() {
         <div className="grid lg:grid-cols-2 gap-12 animate-on-scroll">
           {/* Registration Form */}
           <div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <div className="bg-white rounded-2xl p-5 sm:p-8 shadow-sm border border-gray-100">
               <h3 className="font-playfair font-bold text-2xl text-forest mb-6">Member Registration</h3>
 
               {submitted ? (
@@ -55,7 +55,7 @@ export default function Registration() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-1.5">Full Name *</label>
                       <input
@@ -95,7 +95,7 @@ export default function Registration() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block font-lato text-xs font-bold uppercase tracking-wider text-bblack mb-1.5">Phone *</label>
                       <input
@@ -143,7 +143,7 @@ export default function Registration() {
                   {/* Payment options */}
                   <div>
                     <label className="block font-lato text-xs font-bold uppercase tracking-wider text-black mb-3">Payment Method (Ksh 200 / semester)</label>
-                    <div className="grid grid-cols-2 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       {[
                         { id: 'mpesa', label: 'M-Pesa', detail: 'Pay Bill: 123456', icon: '📱' },
                         { id: 'family', label: 'Family Bank', detail: 'Acc: 0987654321', icon: '🏦' },
@@ -174,7 +174,7 @@ export default function Registration() {
           {/* Resources + Info */}
           <div className="space-y-8">
             {/* Membership benefits */}
-            <div className="bg-forest rounded-2xl p-8 text-cream">
+            <div className="bg-forest rounded-2xl p-5 sm:p-8 text-cream">
               <h3 className="font-playfair font-bold text-xl mb-6">Membership Includes</h3>
               <ul className="space-y-3">
                 {[
@@ -186,7 +186,7 @@ export default function Registration() {
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 font-lato text-sm text-cream/80">
                     <span className="w-5 h-5 rounded-full bg-moss flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5" /></svg>
                     </span>
                     {item}
                   </li>
@@ -195,7 +195,7 @@ export default function Registration() {
             </div>
 
             {/* Resource downloads */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
+            <div className="bg-white rounded-2xl p-5 sm:p-8 border border-gray-100 shadow-sm">
               <h3 className="font-playfair font-bold text-xl text-forest mb-6">Resource Downloads</h3>
               <div className="space-y-3">
                 {resources.map((res, i) => (
@@ -210,7 +210,7 @@ export default function Registration() {
                       <p className="font-lato text-xs text-gray-400">{res.size}</p>
                     </div>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300 group-hover:text-moss transition-colors flex-shrink-0">
-                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" />
                     </svg>
                   </a>
                 ))}

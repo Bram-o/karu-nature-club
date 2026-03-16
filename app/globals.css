@@ -225,3 +225,17 @@ img {
     right: 16px;
   }
 }
+
+/* Mobile Marquee for Announcement Banner */
+@media (max-width: 640px) {
+  .marquee-mobile {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marqueeLeft 15s linear infinite;
+  }
+}
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(100vw); }
+  100% { transform: translateX(-100%); }
+}

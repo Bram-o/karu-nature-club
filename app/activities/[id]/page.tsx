@@ -114,7 +114,7 @@ const subCommittees = [
     fullDesc: 'The Research & Innovation Committee advances our understanding of local environmental issues through scientific research and innovative solutions. We conduct field studies on water quality, soil health, biodiversity, and climate impacts in the Karatina region. Our data informs conservation strategies and policy recommendations. We also develop innovative approaches to environmental challenges, from low-cost water filtration systems to community-based monitoring tools. Our annual environmental reports provide valuable insights for stakeholders and decision-makers.',
     achievements: ['Published 12 research papers', 'Developed 3 innovative conservation tools', 'Monitored 50+ environmental sites', 'Influenced 2 local environmental policies']
   },
-    {
+  {
     id: 9,
     name: 'Research & Innovation',
     image: '/research_&_innovation.jpeg',
@@ -162,7 +162,6 @@ export default function SubcommitteePage({ params }: PageProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-8 left-8 text-white">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-6xl">{committee.icon}</span>
             <div>
               <h1 className="text-4xl md:text-5xl font-playfair font-bold mb-2">{committee.name}</h1>
               <span className={`badge ${committee.accentColor} bg-white/20 text-white text-sm px-4 py-2`}>
@@ -240,7 +239,7 @@ export default function SubcommitteePage({ params }: PageProps) {
             >
               Get Involved
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
+                <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
           </div>
@@ -250,7 +249,7 @@ export default function SubcommitteePage({ params }: PageProps) {
         <div className="text-center mt-12">
           <a href="/activities" className="inline-flex items-center gap-2 border-2 border-green-600 text-green-600 font-lato font-bold px-8 py-3 rounded-full hover:bg-green-50 transition-colors">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
+              <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
             Back to All Activities
           </a>

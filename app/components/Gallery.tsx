@@ -45,17 +45,17 @@ export default function Gallery() {
                 alt={img.alt}
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <div className="flex flex-col items-center gap-2">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-cream"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-                  <p className="font-lato text-lg text-cream font-medium">{img.alt}</p>
+              <div className="absolute inset-0 bg-gradient-to-t from-forest/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-2 xs:p-4">
+                <div className="flex flex-col items-center gap-1 sm:gap-2">
+                  <svg className="w-4 h-4 sm:w-6 sm:h-6 text-cream" viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" /></svg>
+                  <p className="font-lato text-xs sm:text-sm md:text-lg text-cream font-medium text-center leading-tight">{img.alt}</p>
                 </div>
               </div>
             </a>
           ))}
         </div>
 
-        
+
       </div>
     </section>
   )

@@ -23,8 +23,8 @@ export default function Navbar() {
   const [bannerHeight, setBannerHeight] = useState(0)
 
 
-  
-  
+
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > BANNER_HEIGHT)
@@ -55,23 +55,17 @@ export default function Navbar() {
     }
   }, [])
 
-  // When not scrolled: sit just below the banner (or at top-0 if banner dismissed)
-  // When scrolled: always snap to top-0
-  const navTop = scrolled
-    ? 'top-0'
-    : bannerVisible
-      ? `top-[${BANNER_HEIGHT}px]`
-      : 'top-0'
+  // Sit just below the announcement banner, or at top-0 if it's dismissed.
+  const navTop = bannerVisible ? 'top-[40px]' : 'top-0'
 
   return (
     <nav
-      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? 'nav-glass shadow-lg shadow-forest/20'
-          : 'bg-transparent'
-      } ${navTop}`}
+      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? 'nav-glass shadow-lg shadow-forest/20'
+        : 'bg-transparent'
+        } ${navTop}`}
     >
-      {/* rest of your nav JSX unchanged... */}
+      {/* rest of nav JSX unchanged... */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
           <a href="#home" className="flex items-center gap-2 group">
