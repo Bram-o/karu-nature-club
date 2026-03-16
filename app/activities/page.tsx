@@ -1,5 +1,7 @@
 'use client'
 
+import Footer from '../components/Footer'
+
 const subCommittees = [
   {
     id: 1,
@@ -122,7 +124,8 @@ const subCommittees = [
 
 export default function AllActivities() {
   return (
-    <main className="min-h-screen bg-forest">
+    <>
+      <main className="pt-20 min-h-screen bg-forest">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         {[...Array(20)].map((_, i) => (
@@ -226,5 +229,7 @@ export default function AllActivities() {
         </div>
       </div>
     </main>
+      <Footer />
+    </>
   )
 }

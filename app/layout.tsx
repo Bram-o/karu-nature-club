@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Navbar from './components/Navbar'
+import FloatingButtons from './components/FloatingButtons'
 
 export const metadata: Metadata = {
   title: 'KarU Nature Club | Karatina University',
@@ -35,7 +37,9 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body suppressHydrationWarning>
+        <Navbar />
         {children}
+        <FloatingButtons />
       </body>
     </html>
   )

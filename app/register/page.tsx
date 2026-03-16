@@ -1,3 +1,13 @@
+import Registration from '../components/Registration'
+import Footer from '../components/Footer'
+
 export default function RegisterPage() {
-  return <div>Register Page</div>
+  return (
+    <>
+      <main className="pt-20">
+        <Registration />
+      </main>
+      <Footer />
+    </>
+  )
 }

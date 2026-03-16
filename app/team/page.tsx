@@ -1,6 +1,6 @@
 'use client'
 
-import { image } from "framer-motion/client"
+import Footer from '../components/Footer'
 
 const patrons = [
   { name: 'Dr. Sylvia Chebet', role: 'Patron', avatar: 'SC', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
@@ -35,7 +35,8 @@ const members = [
 
 export default function AllTeamPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 to-emerald-50">
+    <>
+      <main className="pt-20 min-h-screen bg-gradient-to-b from-green-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-6 py-24">
         {/* Header */}
         <div className="text-center mb-16">
@@ -132,5 +133,7 @@ export default function AllTeamPage() {
         </div>
       </div>
     </main>
+      <Footer />
+    </>
   )
 }

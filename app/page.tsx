@@ -1,5 +1,4 @@
 import Preloader from './components/Preloader'
-import Navbar from './components/Navbar'
 import HeroCarousel from './components/HeroCarousel'
 import About from './components/About'
 import Activities from './components/Activities'
@@ -9,14 +8,12 @@ import Gallery from './components/Gallery'
 import Registration from './components/Registration'
 import Blog from './components/Blog'
 import Footer from './components/Footer'
-import FloatingButtons from './components/FloatingButtons'
 import ScrollAnimations from './components/ScrollAnimations'
 
 export default function Home() {
   return (
     <>
       <Preloader />
-      <Navbar />
       <main>
         <HeroCarousel />
         <About />
@@ -28,7 +25,6 @@ export default function Home() {
         <Registration />
       </main>
       <Footer />
-      <FloatingButtons />
       <ScrollAnimations />
     </>
   )

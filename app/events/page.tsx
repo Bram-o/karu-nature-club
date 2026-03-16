@@ -1,5 +1,7 @@
 'use client'
 
+import Footer from '../components/Footer'
+
 const events = [
   {
     title: 'Mt. Kenya Day Hike',
@@ -57,7 +59,8 @@ const events = [
 
 export default function AllEventsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-green-50 to-emerald-50">
+    <>
+      <main className="pt-20 min-h-screen bg-gradient-to-b from-green-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-6 py-24">
         {/* Header */}
         <div className="text-center mb-16">
@@ -148,5 +151,7 @@ export default function AllEventsPage() {
         </div>
       </div>
     </main>
+      <Footer />
+    </>
   )
 }

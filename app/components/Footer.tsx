@@ -1,4 +1,16 @@
 'use client'
+import Link from 'next/link'
+
+const quickLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Activities', href: '/activities' },
+  { label: 'Team', href: '/team' },
+  { label: 'Events', href: '/events' },
+  { label: 'Gallery', href: '/gallery' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Register', href: '/register' },
+]
 
 export default function Footer() {
   return (
@@ -45,11 +57,11 @@ export default function Footer() {
           <div>
             <h4 className="font-playfair font-bold text-sm uppercase tracking-widest text-moss mb-5">Quick Links</h4>
             <ul className="space-y-3">
-              {['Home', 'About', 'Activities', 'Team', 'Events', 'Gallery', 'Blog', 'Register'].map((link) => (
-                <li key={link}>
-                  <a href={`#${link.toLowerCase()}`} className="font-lato text-sm text-cream/60 hover:text-cream hover:translate-x-1 inline-block transition-all duration-200">
-                    {link}
-                  </a>
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="font-lato text-sm text-cream/60 hover:text-cream hover:translate-x-1 inline-block transition-all duration-200">
+                    {link.label}
+                  </Link>
                 </li>
               ))}
             </ul>
