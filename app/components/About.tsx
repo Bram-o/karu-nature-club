@@ -94,8 +94,8 @@ export default function About() {
               />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-forest text-cream rounded-xl p-4 shadow-xl">
-              <div className="font-playfair font-bold text-3xl text-moss">5+</div>
+            <div className="absolute -bottom-6 -left-3 bg-forest text-cream rounded-xl p-4 shadow-xl">
+              <div className="font-playfair font-bold text-3xl text-moss">15+</div>
               <div className="font-lato text-xs text-cream/70 uppercase tracking-wider">Years of Impact</div>
             </div>
           </div>
