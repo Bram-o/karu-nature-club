@@ -15,7 +15,7 @@ const leaders = [
   { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '#', color: 'bg-amber-100', email: '#', linkedin: '#' },
   { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '#', color: 'bg-rose-100', email: '#', linkedin: '#' },
   { name: 'Stephen Kingori', role: 'Editor', avatar: 'SK', image: '#', color: 'bg-teal-100', email: '#', linkedin: '#' },
-  { name: 'ken Ndiki', role: 'Vice Editor', avatar: 'KN', image: '#', color: 'bg-indigo-100', email: '#', linkedin: '#' },
+  { name: 'Ken Ndiki', role: 'Vice Editor', avatar: 'KN', image: '#', color: 'bg-indigo-100', email: '#', linkedin: '#' },
   { name: 'Pierrajoy Wangechi', role: 'EX Official', avatar: 'PW', image: '#', color: 'bg-yellow-100', email: '#', linkedin: '#' },
   { name: 'Godwin Kigen', role: 'EX Official', avatar: 'GK', image: '#', color: 'bg-pink-100', email: '#', linkedin: '#' },
 ]
