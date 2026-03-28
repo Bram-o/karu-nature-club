@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 flex items-center justify-center">
-                <img src="/logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
+                <img src="/Logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-playfair font-bold text-cream">KarU Nature Club</p>
@@ -98,7 +98,7 @@ export default function Footer() {
           <div>
             <h4 className="font-playfair font-bold text-sm uppercase tracking-widest text-moss mb-5">Connect</h4>
             <a
-              href="https://wa.me/254712345678"
+              href="https://wa.me/254758223340"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-green-600/20 hover:bg-green-600/30 border border-green-500/30 text-green-400 rounded-xl p-4 transition-all duration-300 mb-4"
