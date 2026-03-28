@@ -31,16 +31,18 @@ const yearOptions = ['1st Year', '2nd Year', '3rd Year', '4th Year', 'Postgradua
 
 const committeeOptions = [
     'Hikes & Adventure',
-    'Conservation & Environment',
+    'Art, Design & Catering',
     'Team Building',
-    'Wildlife & Birding',
-    'Photography & Media',
-    'Community Outreach',
-    'Research & Innovation',
+    'Editorial, Research & Innovation',
+    'Tree Planting, Clean-up and Mentorship',
+    'Welfare',
+    'Debate and First Aid',
+    'Birding & GIS',
+    'Dance'
 ]
 
 const paymentMethods = [
-    { id: 'mpesa', label: 'M-Pesa', detail: 'Pay Bill: 123456', icon: '📱' },
+    { id: 'mpesa', label: 'M-Pesa', detail: 'Pay Bill Business no:222111 Account no:011957', icon: '📱' },
     { id: 'family', label: 'Family Bank', detail: 'Acc: 0987654321', icon: '🏦' },
 ]
 

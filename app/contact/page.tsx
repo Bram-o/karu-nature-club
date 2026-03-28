@@ -13,9 +13,9 @@ export default function ContactPage() {
           <div className="space-y-6 text-left bg-white/5 rounded-2xl p-8 border border-white/10">
             {[
               { icon: '📍', label: 'Address', value: 'Karatina University, P.O. Box 1957-10101, Karatina, Kenya' },
-              { icon: '📧', label: 'Email', value: 'natureclub@karu.ac.ke' },
-              { icon: '📞', label: 'Phone', value: '+254 700 000 000' },
-              { icon: '🕐', label: 'Meetings', value: 'Every Wednesday, 4:00 PM — Main Hall' },
+              { icon: '📧', label: 'Email', value: 'karunatureclub@gmail.com' },
+              { icon: '📞', label: 'Phone', value: '+254 758223340' },
+              { icon: '🕐', label: 'Meetings', value: 'Every Wednesday, 4:00 PM — CF1 Tuition Block' },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">
                 <span className="text-2xl">{item.icon}</span>
