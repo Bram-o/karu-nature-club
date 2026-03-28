@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 flex items-center justify-center">
-                <img src="/logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
+                <img src="/Logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-playfair font-bold text-cream">KarU Nature Club</p>
