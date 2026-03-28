@@ -8,36 +8,42 @@ const whyJoin = [
     objectPosition: 'top',
     title: 'Adventure & Hikes',
     desc: "Scale Mt. Kenya and explore Kenya's most stunning trails with a community of passionate hikers.",
+    link: 'https://photos.app.goo.gl/REPLACEME1',
   },
   {
     image: '/about/conservation.jpeg',
     objectPosition: 'bottom',
     title: 'Conservation Impact',
     desc: 'Lead real environmental change through tree planting, clean-up drives, and conservation education.',
+    link: 'https://photos.app.goo.gl/REPLACEME2',
   },
   {
     image: '/about/leadership.jpeg',
     objectPosition: 'center',
     title: 'Leadership Growth',
     desc: 'Develop leadership, teamwork, and communication skills through our structured sub-committees.',
+    link: 'https://photos.app.goo.gl/REPLACEME3',
   },
   {
     image: '/about/nature_photography.jpeg',
     objectPosition: 'top',
     title: 'Nature Photography',
     desc: "Capture the beauty of Kenya's biodiversity and share your perspective with the world.",
+    link: 'https://photos.app.goo.gl/REPLACEME4',
   },
   {
     image: '/about/community.jpeg',
     objectPosition: 'center',
     title: 'Community Network',
     desc: 'Connect with like-minded students, alumni, and environmental professionals across Kenya.',
+    link: 'https://photos.app.goo.gl/REPLACEME5',
   },
   {
     image: '/about/certificates_and_awards.jpeg',
     objectPosition: 'bottom',
     title: 'Certificates & Awards',
     desc: 'Earn recognition for your contributions and boost your professional portfolio.',
+    link: 'https://photos.app.goo.gl/REPLACEME6',
   },
 ]
 
@@ -47,9 +53,8 @@ export default function AboutPage() {
       <Navbar />
       <main className="pt-20 bg-green-50 min-h-screen">
 
-        {/* ── Hero intro ── */}
+        {/* Hero intro */}
         <section className="py-20 bg-forest relative overflow-hidden">
-          {/* subtle leaf watermark */}
           <div className="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
             <svg viewBox="0 0 200 200" className="w-96 h-96" fill="none">
               <path
@@ -58,7 +63,6 @@ export default function AboutPage() {
               />
             </svg>
           </div>
-
           <div className="max-w-3xl mx-auto px-6 text-center relative z-10">
             <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-moss bg-white/10 px-4 py-1.5 rounded-full mb-4">
               About Us
@@ -66,7 +70,7 @@ export default function AboutPage() {
             <h1 className="font-playfair font-bold text-4xl md:text-5xl text-cream mb-6">
               Who We Are
             </h1>
-            <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6" />
+            <div className="w-16 h-1 bg-moss mx-auto rounded-full mb-6"></div>
             <p className="font-lato text-lg text-cream/80 leading-relaxed mb-4">
               The Karatina University Nature Club is a student-led organization dedicated to
               fostering a deep connection between students and the natural world.
@@ -84,7 +88,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Stats bar ── */}
+        {/* Stats bar */}
         <section className="bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto px-6 py-10 grid grid-cols-3 divide-x divide-gray-100 text-center">
             {[
@@ -102,7 +106,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ── Why Join Us cards ── */}
+        {/* Why Join Us cards */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-12">
@@ -116,15 +120,18 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {whyJoin.map((item, i) => (
-                <div
+                <a
                   key={i}
-                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden hover:shadow-md hover:-translate-y-1 transition-all duration-300 block"
                 >
                   <div className="h-44 w-full overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className={`w-full h-full object-cover object-${item.objectPosition}`}
+                      className={'w-full h-full object-cover object-' + item.objectPosition}
                     />
                   </div>
                   <div className="p-6">
@@ -133,7 +140,7 @@ export default function AboutPage() {
                     </h4>
                     <p className="font-lato text-sm text-gray-500 leading-relaxed">{item.desc}</p>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
 

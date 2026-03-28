@@ -9,7 +9,7 @@ const galleryImages = [
   { src: '/gallery/itiati-team-building.jpg', alt: 'Itiati Team Building', photoLink: 'https://photos.app.goo.gl/3c6Fg1iW5kSuof226' },
   { src: '/gallery/wednesday-weekly-meetings.jpg', alt: 'Wednesday Weekly Meetings', photoLink: 'https://photos.app.goo.gl/JQ7HbFmF92nXbEHD6' },
   { src: '/gallery/nyambene-hills-hike.jpg', alt: 'Nyambene Hills Hike', photoLink: 'https://photos.app.goo.gl/dGEpzz4zdzMeAfad6' },
-  { src: '/gallery/good-faith-childrens-home.jpg', alt: 'Good Faith Childrens Home', photoLink: 'https://photos.app.goo.gl/iFe9gJBwjqDYEXx98' },
+  { src: '/gallery/St. Stephen-childrens-home.jpg', alt: 'St. Stephen Childrens Home', photoLink: 'https://photos.app.goo.gl/DezzmGiCxSBB7pt99' },
 ]
 
 export default function Gallery() {

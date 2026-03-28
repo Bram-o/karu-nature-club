@@ -60,10 +60,10 @@ const galleryImages: GalleryImage[] = [
     photoLink: 'https://photos.app.goo.gl/dGEpzz4zdzMeAfad6',
   },
   {
-    src: '/gallery/good-faith-childrens-home.jpg',
-    alt: 'Good Faith Childrens Home',
+    src: '/gallery/St. Stephen-childrens-home.jpg',
+    alt: 'St. Stephen Childrens Home',
     span: '',
-    photoLink: 'https://photos.app.goo.gl/iFe9gJBwjqDYEXx98',
+    photoLink: 'https://photos.app.goo.gl/DezzmGiCxSBB7pt99',
   },
 ]
 
