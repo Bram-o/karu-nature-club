@@ -41,7 +41,7 @@ export default function Preloader() {
           
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <img src="/logo.png" alt="KarU Nature Club" className="w-80 h-50 pt-3 pb-2" />
+          <img src="/Logo.png" alt="KarU Nature Club" className="w-80 h-50 pt-3 pb-2" />
         </div>
       </div>
 

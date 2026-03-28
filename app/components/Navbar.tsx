@@ -49,7 +49,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-18">
           <Link href="/" className="flex items-center gap-2 group">
             <div className="w-20 h-20 flex items-center justify-center">
-              <img src="/logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
+              <img src="/Logo.png" alt="KarU Nature Club" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col leading-none">
               <span className="font-playfair font-bold text-base tracking-wide text-cream transition-colors">
