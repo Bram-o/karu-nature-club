@@ -45,7 +45,7 @@ export default function HeroCarousel() {
   const slide = slides[current]
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative w-full min-h-[94vh] lg:min-h-screen flex items-center overflow-hidden">
 
       {/* Background image */}
       <div
@@ -73,18 +73,18 @@ export default function HeroCarousel() {
       </div>
 
       {/* Content — tighter padding on mobile */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-32 sm:pt-32 sm:pb-40 md:py-36">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-20 sm:pt-32 sm:pb-20 md:py-36">
         <div className="max-w-2xl">
 
           {/* Badge — smaller on mobile */}
-          <div className="inline-flex items-center gap-2 bg-moss/20 border border-moss/30 text-moss px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm font-lato font-medium mb-4 sm:mb-6 backdrop-blur-sm">
+          <div className="inline-flex items-center gap-2 bg-moss/20 border border-moss/30 text-moss px-4 py-1.5 sm:px-5 sm:py-2 rounded-full text-sm sm:text-base font-lato font-medium mb-5 sm:mb-8 backdrop-blur-sm">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-moss rounded-full animate-pulse" />
             Karatina University Nature Club
           </div>
 
           {/* Title — smaller on mobile */}
           <h1
-            className="font-playfair font-bold text-cream leading-tight mb-3 sm:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+            className="font-playfair font-bold text-cream leading-tight mb-4 sm:mb-8 text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
             style={{
               opacity: animating ? 0 : 1,
               transform: animating ? 'translateY(20px)' : 'translateY(0)',
@@ -96,7 +96,7 @@ export default function HeroCarousel() {
 
           {/* Subtitle — smaller and shorter on mobile */}
           <p
-            className="font-lato text-sm sm:text-lg text-cream/80 mb-5 sm:mb-8 leading-relaxed max-w-xl"
+            className="font-lato text-base sm:text-xl md:text-2xl text-cream/80 mb-6 sm:mb-10 leading-relaxed max-w-2xl"
             style={{
               opacity: animating ? 0 : 1,
               transform: animating ? 'translateY(20px)' : 'translateY(0)',
@@ -107,19 +107,19 @@ export default function HeroCarousel() {
           </p>
 
           {/* Buttons — smaller padding on mobile */}
-          <div className="flex flex-wrap gap-3 sm:gap-4">
+          <div className="flex flex-wrap gap-4 sm:gap-6 mt-4">
             <a
               href={slide.ctaHref}
-              className="inline-flex items-center gap-2 bg-moss text-forest font-lato font-bold px-5 py-2.5 sm:px-8 sm:py-3.5 text-sm sm:text-base rounded-full hover:bg-moss/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-moss/30"
+              className="inline-flex items-center gap-2 bg-moss text-forest font-lato font-bold px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full hover:bg-moss/90 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-moss/30"
             >
               {slide.cta}
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
             <a
-              href="#about"
-              className="inline-flex items-center gap-2 border border-cream/30 text-cream font-lato font-medium px-5 py-2.5 sm:px-8 sm:py-3.5 text-sm sm:text-base rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              href="/about"
+              className="inline-flex items-center gap-2 border border-cream/30 text-cream font-lato font-medium px-6 py-3 sm:px-8 sm:py-4 text-base sm:text-lg rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
             >
               Learn More
             </a>
@@ -128,7 +128,7 @@ export default function HeroCarousel() {
       </div>
 
       {/* Slide indicators */}
-      <div className="absolute bottom-16 sm:bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-10">
+      <div className="absolute bottom-24 sm:bottom-20 left-1/2 -translate-x-1/2 flex items-center gap-2 sm:gap-3 z-10">
         {slides.map((_, i) => (
           <button
             key={i}
