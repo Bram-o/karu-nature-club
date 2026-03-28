@@ -117,7 +117,6 @@ export default function HeroCarousel() {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-
             <a
               href="#about"
               className="inline-flex items-center gap-2 border border-cream/30 text-cream font-lato font-medium px-5 py-2.5 sm:px-8 sm:py-3.5 text-sm sm:text-base rounded-full hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"

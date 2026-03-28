@@ -26,7 +26,7 @@ export default function FloatingButtons() {
             <p className="font-lato text-xs font-bold flex items-center gap-2 marquee-mobile">
               <span className="w-1.5 h-1.5 bg-forest rounded-full animate-pulse flex-shrink-0" />
               <span>📢 Semester Registration Open! Join by March 31st and get 20% off membership fee.</span>
-              <a href="#register" className="underline hover:no-underline ml-1 whitespace-nowrap">Register now →</a>
+              <a href="/register" className="underline hover:no-underline ml-1 whitespace-nowrap">Register now →</a>
             </p>
           </div>
           <button

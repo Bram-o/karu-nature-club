@@ -1,6 +1,26 @@
-'use client'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Link from 'next/link'
 
-const posts = [
+type Post = {
+  title: string
+  excerpt: string
+  date: string
+  category: string
+  categoryColor: string
+  readTime: string
+  image: string
+  author: string
+}
+
+type Testimonial = {
+  quote: string
+  name: string
+  year: string
+  avatar: string
+}
+
+const posts: Post[] = [
   {
     title: 'Our Epic Mt. Kenya Summit Attempt',
     excerpt: 'Twenty-three members braved the cold and altitude to reach Point Lenana at 4,985m. Here\'s our incredible story.',
@@ -33,7 +53,7 @@ const posts = [
   },
 ]
 
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     quote: 'Joining KarU Nature Club was one of the best decisions I made at university. The hikes, friendships, and environmental work have shaped who I am.',
     name: 'Lydia Mwangi',
@@ -54,77 +74,111 @@ const testimonials = [
   },
 ]
 
-export default function Blog() {
+function getInitials(name: string): string {
+  return name.split(' ').map((n) => n[0]).join('')
+}
+
+export default function BlogPage() {
   return (
-    <section id="blog" className="py-24 bg-teal-50 relative">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Blog */}
-        <div className="mb-20">
-          <div className="text-center mb-16 animate-on-scroll">
-            <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
-              Stories & Insights
-            </span>
-            <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
-              Our Blog
-            </h2>
-            <div className="w-16 h-1 bg-moss mx-auto rounded-full" />
-          </div>
+    <div>
+      <Navbar />
+      <main className="pt-20">
+        <section className="py-24 bg-teal-50 min-h-screen relative">
+          <div className="max-w-7xl mx-auto px-6">
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-on-scroll">
-            {posts.map((post, i) => (
-              <a key={i} href={`/blog/${i + 1}`} className="card-hover bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 block hover:shadow-lg transition-shadow">
-                <div className="h-44 overflow-hidden">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className={`badge ${post.categoryColor} text-xs`}>{post.category}</span>
-                    <span className="font-lato text-xs text-gray-400">{post.readTime}</span>
-                  </div>
-                  <h3 className="font-playfair font-bold text-lg text-forest mb-2 leading-snug">{post.title}</h3>
-                  <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center text-xs font-bold text-forest">
-                        {post.author.split(' ').map(n => n[0]).join('')}
-                      </div>
-                      <span className="font-lato text-xs text-gray-500">{post.author}</span>
-                    </div>
-                    <span className="font-lato text-xs text-gray-400">{post.date}</span>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="animate-on-scroll">
-          <div className="text-center mb-12">
-            <h3 className="font-playfair font-bold text-3xl text-forest mb-3">What Members Say</h3>
-            <div className="w-12 h-1 bg-moss mx-auto rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm relative">
-                {/* Quote mark */}
-                <div className="absolute top-4 right-6 text-5xl text-moss/20 font-playfair leading-none select-none">"</div>
-                <p className="font-lato text-gray-600 leading-relaxed mb-6 text-sm italic relative z-10">{t.quote}</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center font-bold text-sm text-forest">
-                    {t.avatar}
-                  </div>
-                  <div>
-                    <p className="font-lato font-bold text-sm text-gray-800">{t.name}</p>
-                    <p className="font-lato text-xs text-gray-400">{t.year}</p>
-                  </div>
-                </div>
+            {/* Blog Posts */}
+            <div className="mb-20">
+              <div className="text-center mb-16">
+                <span className="inline-block text-xs font-lato font-bold uppercase tracking-widest text-forest bg-moss/20 px-4 py-1.5 rounded-full mb-4">
+                  Stories &amp; Insights
+                </span>
+                <h2 className="font-playfair font-bold text-4xl md:text-5xl text-forest mb-4">
+                  Our Blog
+                </h2>
+                <div className="w-16 h-1 bg-moss mx-auto rounded-full"></div>
               </div>
-            ))}
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {posts.map((post, i) => (
+                  <Link
+                    key={i}
+                    href={'/blog/' + (i + 1)}
+                    className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 block hover:shadow-lg transition-shadow"
+                  >
+                    <div className="h-44 overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className={'text-xs px-2 py-1 rounded-full font-lato font-bold ' + post.categoryColor}>
+                          {post.category}
+                        </span>
+                        <span className="font-lato text-xs text-gray-400">{post.readTime}</span>
+                      </div>
+                      <h3 className="font-playfair font-bold text-lg text-forest mb-2 leading-snug">
+                        {post.title}
+                      </h3>
+                      <p className="font-lato text-sm text-gray-500 leading-relaxed mb-4">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-2">
+                          <div className="w-7 h-7 rounded-full bg-forest/10 flex items-center justify-center text-xs font-bold text-forest">
+                            {getInitials(post.author)}
+                          </div>
+                          <span className="font-lato text-xs text-gray-500">{post.author}</span>
+                        </div>
+                        <span className="font-lato text-xs text-gray-400">{post.date}</span>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Testimonials */}
+            <div>
+              <div className="text-center mb-12">
+                <h3 className="font-playfair font-bold text-3xl text-forest mb-3">
+                  What Members Say
+                </h3>
+                <div className="w-12 h-1 bg-moss mx-auto rounded-full"></div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {testimonials.map((t, i) => (
+                  <div
+                    key={i}
+                    className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm relative"
+                  >
+                    <div className="absolute top-4 right-6 text-5xl text-moss/20 font-playfair leading-none select-none">
+                      &quot;
+                    </div>
+                    <p className="font-lato text-gray-600 leading-relaxed mb-6 text-sm italic relative z-10">
+                      {t.quote}
+                    </p>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-forest/10 flex items-center justify-center font-bold text-sm text-forest">
+                        {t.avatar}
+                      </div>
+                      <div>
+                        <p className="font-lato font-bold text-sm text-gray-800">{t.name}</p>
+                        <p className="font-lato text-xs text-gray-400">{t.year}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      </main>
+      <Footer />
+    </div>
   )
 }
