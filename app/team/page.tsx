@@ -3,8 +3,8 @@
 import Footer from '../components/Footer'
 
 const patrons = [
-  { name: 'Dr. Sylvia Chebet', role: 'Patron', avatar: 'SC', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
-  { name: 'Prof. John Mwangi', role: 'Patron', avatar: 'JM', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
+  { name: 'Dr.Kimuyu', role: 'Patron', avatar: 'DK', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
+  { name: 'Joseph Wanjau', role: 'Assistant Patron', avatar: 'JW', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
 ]
 
 const leaders = [
@@ -17,7 +17,7 @@ const leaders = [
   { name: 'Stephen Kingori', role: 'Editor', avatar: 'SK', image: '#', color: 'bg-teal-100', email: '#', linkedin: '#' },
   { name: 'ken Ndiki', role: 'Vice Editor', avatar: 'KN', image: '#', color: 'bg-indigo-100', email: '#', linkedin: '#' },
   { name: 'Pierrajoy Wangechi', role: 'EX Official', avatar: 'PW', image: '#', color: 'bg-yellow-100', email: '#', linkedin: '#' },
-  { name: 'Rachel Anyango', role: 'EX Official', avatar: 'RA', image: '#', color: 'bg-pink-100', email: '#', linkedin: '#' },
+  { name: 'Godwin Kigen', role: 'EX Official', avatar: 'GK', image: '#', color: 'bg-pink-100', email: '#', linkedin: '#' },
 ]
 
 const members = [
