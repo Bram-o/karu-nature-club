@@ -1,7 +1,5 @@
 'use client'
 
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 
 type GalleryImage = {
   src: string
@@ -105,7 +103,7 @@ function GalleryCard({ img }: { img: GalleryImage }) {
 export default function GalleryPage() {
   return (
     <div>
-      <Navbar />
+
       <main className="pt-20">
         <section className="py-24 bg-gray-900 min-h-screen overflow-hidden">
           <div className="max-w-7xl mx-auto px-6">
@@ -132,7 +130,7 @@ export default function GalleryPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </div>
   )
 }

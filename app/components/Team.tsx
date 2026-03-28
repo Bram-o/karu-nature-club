@@ -1,12 +1,12 @@
 'use client'
 
 const team = [
-  { name: 'Mark Lairenge', role: 'Club President', avatar: 'ML', image: '#', color: 'bg-forest/10', email: '#', linkedin: '#' },
-  { name: 'Faith Mumbi', role: 'Vice President', avatar: 'FM', image: '#', color: 'bg-moss/20', email: '#', linkedin: '#' },
-  { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '#', color: 'bg-earth/20', email: '#', linkedin: '#' },
-  { name: 'David mugo', role: 'Treasurer', avatar: 'DM', image: '#', color: 'bg-blue-100', email: '#', linkedin: '#' },
-  { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '#', color: 'bg-amber-100', email: '#', linkedin: '#' },
-  { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '#', color: 'bg-rose-100', email: '#', linkedin: '#' },
+  { name: 'Mark Lairenge', role: 'Club President', avatar: 'ML', image: '/team/mark.jpg', color: 'bg-forest/10', email: '#', linkedin: '#' },
+  { name: 'Faith Mumbi', role: 'Vice President', avatar: 'FM', image: '/team/faith.jpg', color: 'bg-moss/20', email: '#', linkedin: '#' },
+  { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '/team/harun.jpg', color: 'bg-earth/20', email: '#', linkedin: '#' },
+  { name: 'David mugo', role: 'Treasurer', avatar: 'DM', image: '/team/david.jpg', color: 'bg-blue-100', email: '#', linkedin: '#' },
+  { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '/team/mary.jpg', color: 'bg-amber-100', email: '#', linkedin: '#' },
+  { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '/team/irene.jpg', color: 'bg-rose-100', email: '#', linkedin: '#' },
 ]
 
 export default function Team() {

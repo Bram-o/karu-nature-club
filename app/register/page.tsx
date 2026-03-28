@@ -1,11 +1,10 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
+
 import RegisterForm from './RegisterForm'
 
 export default function RegisterPage() {
   return (
     <div>
-      <Navbar />
+
       <main className="pt-20">
         <section className="py-24 pb-32 sm:pb-24 bg-cream min-h-screen relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -28,7 +27,7 @@ export default function RegisterPage() {
           </div>
         </section>
       </main>
-      <Footer />
+
     </div>
   )
 }

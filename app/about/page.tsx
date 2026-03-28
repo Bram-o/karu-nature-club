@@ -1,5 +1,3 @@
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
 import Link from 'next/link'
 
 const whyJoin = [
@@ -50,7 +48,6 @@ const whyJoin = [
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
       <main className="pt-20 bg-green-50 min-h-screen">
 
         {/* Hero intro */}
@@ -159,7 +156,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   )
 }

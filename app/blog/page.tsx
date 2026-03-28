@@ -1,5 +1,3 @@
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import Link from 'next/link'
 
 type Post = {
@@ -81,7 +79,6 @@ function getInitials(name: string): string {
 export default function BlogPage() {
   return (
     <div>
-      <Navbar />
       <main className="pt-20">
         <section className="py-24 bg-teal-50 min-h-screen relative">
           <div className="max-w-7xl mx-auto px-6">
@@ -178,7 +175,6 @@ export default function BlogPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }
