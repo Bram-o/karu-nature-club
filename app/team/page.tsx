@@ -26,12 +26,12 @@ const ExecutiveCommittee = [
 ]
 
 const subCommitteeLeaders = [
-  { name: 'Christine Mwangi', role: 'Chairperson' < br /> 'Art, Design and Catering', avatar: 'CM', image: '/team/christine.jpg', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Bramuel Mulupi', role: 'Chairperson <br> Editorial Research and Innovation', avatar: 'BM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Brian Kipkemoi', role: 'Chairperson <br> Birding and GIS', avatar: 'BK', image: '#', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
-  { name: 'Douglas Kirianki', role: 'Chairperson <br> Debate and Fist Aid', avatar: 'DK', image: '#', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
-  { name: 'Margret Wambui', role: 'Chairperson <br> Dance', avatar: 'MW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Dennis Mulinge', role: 'Chairperson <br> Tree Planting ', avatar: 'DM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Christine Mwangi', role: 'Chairperson-Art, Design and Catering', avatar: 'CM', image: '/team/christine.jpg', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Bramuel Mulupi', role: 'Chairperson-Editorial Research and Innovation', avatar: 'BM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Brian Kipkemoi', role: 'Chairperson-Birding and GIS', avatar: 'BK', image: '#', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
+  { name: 'Douglas Kirianki', role: 'Chairperson-Debate and Fist Aid', avatar: 'DK', image: '#', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
+  { name: 'Margret Wambui', role: 'Chairperson-Dance', avatar: 'MW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Dennis Mulinge', role: 'Chairperson-Tree Planting ', avatar: 'DM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
 
 ]
 
