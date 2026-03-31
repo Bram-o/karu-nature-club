@@ -51,8 +51,8 @@ body {
 /* Navbar glassmorphism */
 .nav-glass {
   background: rgba(44, 95, 45, 0.95);
-  backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(151, 188, 98, 0.2);
 }
 
@@ -65,8 +65,8 @@ body {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
-              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .animate-on-scroll.visible {
@@ -100,8 +100,8 @@ body {
 
 /* Card hover effects */
 .card-hover {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-hover:hover {
@@ -136,28 +136,32 @@ body {
 }
 
 @keyframes slideDown {
-  from { 
-    transform: translateY(-100%); 
-    opacity: 0; 
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
   }
-  to { 
-    transform: translateY(0); 
-    opacity: 1; 
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes float {
-  0%, 100% { 
-    transform: translateY(0px); 
+
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  50% { 
-    transform: translateY(-12px); 
+
+  50% {
+    transform: translateY(-12px);
   }
 }
 
 /* Green texture overlay for sections */
 .nature-texture {
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 50%, rgba(44, 95, 45, 0.04) 0%, transparent 50%),
     radial-gradient(circle at 80% 50%, rgba(151, 188, 98, 0.04) 0%, transparent 50%);
 }
@@ -182,8 +186,8 @@ body {
 }
 
 /* Input focus styles */
-input:focus, 
-textarea:focus, 
+input:focus,
+textarea:focus,
 select:focus {
   outline: none;
   border-color: #97BC62;
@@ -203,7 +207,8 @@ select:focus {
 }
 
 /* Smooth transitions */
-a, button {
+a,
+button {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -219,7 +224,7 @@ img {
     bottom: 80px;
     right: 16px;
   }
-  
+
   .back-to-top {
     bottom: 16px;
     right: 16px;
@@ -236,6 +241,11 @@ img {
 }
 
 @keyframes marqueeLeft {
-  0% { transform: translateX(100vw); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }

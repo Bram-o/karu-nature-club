@@ -4,7 +4,7 @@ import Footer from '../components/Footer'
 
 const patrons = [
   { name: 'Dr.Kimuyu', role: 'Patron', avatar: 'DK', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
-  { name: 'Hillary Kosgei', role: 'Assistant Patron', avatar: 'HK', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
+  { name: 'Hillary Kosgei', role: 'Assistant Patron', avatar: 'HK', image: '/team/hillary.jpeg', color: 'bg-emerald-100', email: '#', linkedin: '#' },
 ]
 
 const friends = [
@@ -18,18 +18,18 @@ const ExecutiveCommittee = [
   { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '/team/harun.jpg', color: 'bg-earth/20', email: '#', linkedin: '#' },
   { name: 'David Mugo', role: 'Treasurer', avatar: 'DM', image: '/team/david.jpg', color: 'bg-blue-100', email: '#', linkedin: '#' },
   { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '/team/mary.jpg', color: 'bg-amber-100', email: '#', linkedin: '#' },
-  { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '/team/irene.jpg', color: 'bg-rose-100', email: 'kimani.irene232@s.karu.ac.ke', linkedin: '#' },
-  { name: 'Stephen Kingori', role: 'Editor', avatar: 'SK', image: '/team/stephen.jpg', color: 'bg-teal-100', email: 'stephenkingori635@gmail.com', linkedin: 'https://www.linkedin.com/in/stephen-kingori/' },
+  { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '/team/irene.jpeg', color: 'bg-rose-100', email: 'kimani.irene232@s.karu.ac.ke', linkedin: '#' },
+  { name: 'Stephen Kingori', role: 'Editor', avatar: 'SK', image: '/team/kings.jpeg', color: 'bg-teal-100', email: 'stephenkingori635@gmail.com', linkedin: 'https://www.linkedin.com/in/stephen-kingori/' },
   { name: 'Ken Ndiki', role: 'Vice Editor', avatar: 'KN', image: '/team/ken.jpg', color: 'bg-indigo-100', email: '#', linkedin: '#' },
   { name: 'Pierrajoy Wangechi', role: 'EX Official', avatar: 'PW', image: '/team/pierrajoy.jpg', color: 'bg-yellow-100', email: '#', linkedin: '#' },
-  { name: 'Godwin Kigen', role: 'EX Official', avatar: 'GK', image: '/team/godwin.jpg', color: 'bg-pink-100', email: 'godwinkigen3@gmail.com', linkedin: '#' },
+  { name: 'Godwin Kigen', role: 'EX Official', avatar: 'GK', image: '/team/godwin.jpeg', color: 'bg-pink-100', email: 'godwinkigen3@gmail.com', linkedin: '#' },
 ]
 
 const subCommitteeLeaders = [
   { name: 'Christine Mwangi', role: 'Chairperson-Art, Design and Catering', avatar: 'CM', image: '/team/christine.jpg', color: 'bg-slate-100', email: '#', linkedin: '#' },
   { name: 'Bramuel Mulupi', role: 'Chairperson-Editorial Research and Innovation', avatar: 'BM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Brian Kipkemoi', role: 'Chairperson-Birding and GIS', avatar: 'BK', image: '#', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
-  { name: 'Douglas Kirianki', role: 'Chairperson-Debate and Fist Aid', avatar: 'DK', image: '#', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
+  { name: 'Brian Kipkemoi', role: 'Chairperson-Birding and GIS', avatar: 'BK', image: '/team/brian.jpeg', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
+  { name: 'Douglas Kirianki', role: 'Chairperson-Debate and Fist Aid', avatar: 'DK', image: '/team/douglas.jpeg', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
   { name: 'Margret Wambui', role: 'Chairperson-Dance', avatar: 'MW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
   { name: 'Dennis Mulinge', role: 'Chairperson-Tree Planting ', avatar: 'DM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
 
