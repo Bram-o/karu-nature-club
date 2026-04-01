@@ -15,7 +15,7 @@ const friends = [
 const ExecutiveCommittee = [
   { name: 'Mark Lairenge', role: 'Club President', avatar: 'ML', image: '/team/mark.jpg', color: 'bg-forest/10', email: '#', linkedin: '#' },
   { name: 'Faith Mumbi', role: 'Vice President', avatar: 'FM', image: '/team/faith.jpg', color: 'bg-moss/20', email: '#', linkedin: '#' },
-  { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '/team/harun.jpg', color: 'bg-earth/20', email: '#', linkedin: '#' },
+  { name: 'Harun Wainaina', role: 'Organizing Secretary', avatar: 'HW', image: '/team/harun.jpeg', color: 'bg-earth/20', email: '#', linkedin: '#' },
   { name: 'David Mugo', role: 'Treasurer', avatar: 'DM', image: '/team/david.jpg', color: 'bg-blue-100', email: '#', linkedin: '#' },
   { name: 'Mary Macharia', role: 'Secretary', avatar: 'MM', image: '/team/mary.jpg', color: 'bg-amber-100', email: '#', linkedin: '#' },
   { name: 'Irene Kimani', role: 'Vice Secretary', avatar: 'IK', image: '/team/irene.jpeg', color: 'bg-rose-100', email: 'kimani.irene232@s.karu.ac.ke', linkedin: '#' },
@@ -27,7 +27,7 @@ const ExecutiveCommittee = [
 
 const subCommitteeLeaders = [
   { name: 'Christine Mwangi', role: 'Chairperson-Art, Design and Catering', avatar: 'CM', image: '/team/christine.jpg', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Bramuel Mulupi', role: 'Chairperson-Editorial Research and Innovation', avatar: 'BM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Bramuel Mulupi', role: 'Chairperson-Editorial Research and Innovation', avatar: 'BM', image: '/team/bram.jpeg', color: 'bg-slate-100', email: '#', linkedin: '#' },
   { name: 'Brian Kipkemoi', role: 'Chairperson-Birding and GIS', avatar: 'BK', image: '/team/brian.jpeg', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
   { name: 'Douglas Kirianki', role: 'Chairperson-Debate and Fist Aid', avatar: 'DK', image: '/team/douglas.jpeg', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
   { name: 'Margret Wambui', role: 'Chairperson-Dance', avatar: 'MW', image: '/team/maggie.jpeg', color: 'bg-slate-100', email: 'irungu.margaret23@s.karu.ac.ke', linkedin: '#' },
