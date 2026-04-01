@@ -4,12 +4,12 @@ import Footer from '../components/Footer'
 
 const patrons = [
   { name: 'Dr.Kimuyu', role: 'Patron', avatar: 'DK', image: '#', color: 'bg-emerald-100', email: '#', linkedin: '#' },
-  { name: 'Hillary Kosgei', role: 'Assistant Patron', avatar: 'HK', image: '/team/hillary.jpeg', color: 'bg-emerald-100', email: '#', linkedin: '#' },
+  { name: 'Hillary Kosgei', role: 'Assistant Patron', avatar: 'HK', image: '/team/hillary.jpeg', color: 'bg-emerald-100', email: 'hkimutai@karu.ac.ke', linkedin: '#' },
 ]
 
 const friends = [
   { name: 'David Wainaina', role: 'Member', avatar: 'DW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Caroline Wangari', role: 'Member', avatar: 'CW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Caroline Wangari', role: 'Member', avatar: 'CW', image: '/team/wangari.jpeg', color: 'bg-slate-100', email: 'reycarey23@gmail.com', linkedin: '#' },
 ]
 
 const ExecutiveCommittee = [
@@ -30,7 +30,7 @@ const subCommitteeLeaders = [
   { name: 'Bramuel Mulupi', role: 'Chairperson-Editorial Research and Innovation', avatar: 'BM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
   { name: 'Brian Kipkemoi', role: 'Chairperson-Birding and GIS', avatar: 'BK', image: '/team/brian.jpeg', color: 'bg-slate-100', email: 'briankipkemoi954b@gmail.com', linkedin: '#' },
   { name: 'Douglas Kirianki', role: 'Chairperson-Debate and Fist Aid', avatar: 'DK', image: '/team/douglas.jpeg', color: 'bg-slate-100', email: 'Murimi.kirianki24@s.karu.ac', linkedin: '#' },
-  { name: 'Margret Wambui', role: 'Chairperson-Dance', avatar: 'MW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
+  { name: 'Margret Wambui', role: 'Chairperson-Dance', avatar: 'MW', image: '/team/maggie.jpeg', color: 'bg-slate-100', email: 'irungu.margaret23@s.karu.ac.ke', linkedin: '#' },
   { name: 'Dennis Mulinge', role: 'Chairperson-Tree Planting ', avatar: 'DM', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
 
 ]
