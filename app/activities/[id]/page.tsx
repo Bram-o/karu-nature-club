@@ -41,9 +41,9 @@ We welcome everyone, from first-timers lacing up their boots for the very first 
     color: 'bg-green-50 border-green-200',
     accentColor: 'text-green-700',
     badgeBg: 'bg-green-100',
-    leader: 'Peter Kamau',
+    leader: 'Dennis  Mulinge',
     role: 'Chairperson',
-    avatar: 'PK',
+    avatar: 'DM',
     desc: "Leading tree planting campaigns, clean-up drives, and environmental awareness programs to protect Kenya's natural ecosystems.",
     fullDesc: `The Conservation & Environment committee is the environmental conscience of our club. We take direct, measurable action to restore and protect the ecosystems surrounding Karatina and beyond.
 
@@ -128,9 +128,9 @@ We also contribute citizen-science data to national monitoring programmes, runni
     color: 'bg-blue-50 border-blue-200',
     accentColor: 'text-blue-700',
     badgeBg: 'bg-blue-100',
-    leader: 'Grace Muthoni',
+    leader: 'Bramuel  Muluppi',
     role: 'Chairperson',
-    avatar: 'GM',
+    avatar: 'BM',
     desc: 'Documenting our adventures and the natural world through photography, videography, and social media content to inspire others.',
     fullDesc: `The Photography & Media committee is the storytelling engine of KU Outdoor Club. We believe that powerful imagery and authentic storytelling are essential tools for conservation — inspiring people to love and protect what they can see.
 
@@ -157,9 +157,9 @@ Beyond artistic development, we manage the club's social media channels, website
     color: 'bg-purple-50 border-purple-200',
     accentColor: 'text-purple-700',
     badgeBg: 'bg-purple-100',
-    leader: 'James Gitonga',
+    leader: 'Pierra Wangechi',
     role: 'Chairperson',
-    avatar: 'JG',
+    avatar: 'PW',
     desc: 'Engaging local communities around Karatina through environmental education, school visits, and partnerships with conservation organisations.',
     fullDesc: `The Community Outreach committee bridges the gap between the university and the surrounding communities of Karatina and the Mt. Kenya region. We believe that lasting conservation requires the active participation of the people who live closest to the land.
 
@@ -186,9 +186,9 @@ Our flagship initiative — the Community Conservation Champions programme — t
     color: 'bg-rose-50 border-rose-200',
     accentColor: 'text-rose-700',
     badgeBg: 'bg-rose-100',
-    leader: 'Mary Wambui',
+    leader: 'Bramuel Mulupi',
     role: 'Chairperson',
-    avatar: 'MW',
+    avatar: 'BM',
     desc: 'Conducting environmental research, monitoring ecosystem health, and developing innovative solutions to local environmental challenges.',
     fullDesc: `The Research & Innovation committee is the analytical backbone of KU Outdoor Club. We design and execute rigorous field studies that produce real data on ecosystem health, biodiversity trends, and the impacts of human activity on the Mt. Kenya landscape.
 
