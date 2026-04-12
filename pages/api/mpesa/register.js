@@ -51,9 +51,9 @@ export default function RegisterForm() {
     const [submitted, setSubmitted] = useState(false)
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState('')
-    const [messageType, setMessageType] = useState < 'success' | 'error' | 'info' > ('info')
+    const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('info')
 
-    const [form, setForm] = useState < FormState > ({
+    const [form, setForm] = useState<FormState>({
         fullName: '',
         email: '',
         phone: '',
@@ -111,10 +111,10 @@ export default function RegisterForm() {
                 const normalisedPhone = raw.startsWith('+254')
                     ? raw.slice(1)
                     : raw.startsWith('254')
-                        ? raw
-                        : raw.startsWith('0')
-                            ? '254' + raw.slice(1)
-                            : raw
+                    ? raw
+                    : raw.startsWith('0')
+                    ? '254' + raw.slice(1)
+                    : raw
 
                 // Trigger STK Push via our API route
                 const res = await fetch('/api/mpesa/stkpush', {
@@ -170,8 +170,8 @@ export default function RegisterForm() {
         messageType === 'success'
             ? 'bg-green-50 text-green-700 border border-green-200'
             : messageType === 'error'
-                ? 'bg-red-50 text-red-700 border border-red-200'
-                : 'bg-blue-50 text-blue-700 border border-blue-200'
+            ? 'bg-red-50 text-red-700 border border-red-200'
+            : 'bg-blue-50 text-blue-700 border border-blue-200'
 
     return (
         <div className="grid lg:grid-cols-2 gap-12">
