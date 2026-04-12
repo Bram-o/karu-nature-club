@@ -9,7 +9,7 @@ const patrons = [
 
 const friends = [
   { name: 'David Wainaina', role: 'Member', avatar: 'DW', image: '#', color: 'bg-slate-100', email: '#', linkedin: '#' },
-  { name: 'Caroline Wangari', role: 'Member', avatar: 'CW', image: '/team/wangari.jpeg', color: 'bg-slate-100', email: 'reycarey23@gmail.com', linkedin: '#' },
+  { name: 'Wangari Kiarie', role: 'Member', avatar: 'WK', image: '/team/wangari.jpeg', color: 'bg-slate-100', email: 'reycarey23@gmail.com', linkedin: '#' },
 ]
 
 const ExecutiveCommittee = [
