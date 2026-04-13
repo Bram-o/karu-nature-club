@@ -37,13 +37,12 @@ export default function Navbar() {
   const navTop = bannerVisible ? 'top-[40px]' : 'top-0'
 
   const isActive = (href: string) =>
-    href === '/' ? pathname === '/' : pathname.startsWith(href)
+    href === '/' ? pathname === '/' : pathname?.startsWith(href) ?? false
 
   return (
     <nav
-      className={`fixed left-0 right-0 z-50 transition-all duration-500 nav-glass ${
-        scrolled ? 'shadow-lg shadow-forest/20' : ''
-      } ${navTop}`}
+      className={`fixed left-0 right-0 z-50 transition-all duration-500 nav-glass ${scrolled ? 'shadow-lg shadow-forest/20' : ''
+        } ${navTop}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-18">
@@ -103,8 +102,8 @@ export default function Navbar() {
                 ${link.label === 'Register'
                   ? 'bg-moss text-forest font-bold text-center mt-2 rounded-full'
                   : isActive(link.href)
-                  ? 'text-moss bg-white/10'
-                  : 'text-cream/80 hover:text-cream hover:bg-white/10'
+                    ? 'text-moss bg-white/10'
+                    : 'text-cream/80 hover:text-cream hover:bg-white/10'
                 }`}
             >
               {link.label}

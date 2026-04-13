@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Step 1: Get token
+        // Step 1: Get M-Pesa access token
         const credentials = Buffer.from(
             `${process.env.MPESA_CONSUMER_KEY}:${process.env.MPESA_CONSUMER_SECRET}`
         ).toString('base64')
@@ -26,9 +26,10 @@ export default async function handler(req, res) {
             'https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials',
             {
                 method: 'GET',
-                headers: { Authorization: `Basic ${credentials}` }
+                headers: { Authorization: `Basic ${credentials}` },
             }
         )
+
         const tokenData = await tokenRes.json()
         const token = tokenData.access_token
 
@@ -36,7 +37,7 @@ export default async function handler(req, res) {
             return res.status(500).json({ error: 'Could not get M-Pesa token' })
         }
 
-        // Step 2: Build password and timestamp
+        // Step 2: Build timestamp and password
         const timestamp = new Date()
             .toISOString()
             .replace(/[^0-9]/g, '')
@@ -46,21 +47,14 @@ export default async function handler(req, res) {
             `${process.env.MPESA_SHORTCODE}${process.env.MPESA_PASSKEY}${timestamp}`
         ).toString('base64')
 
-        // Step 3: Format phone number (0712345678 → 254712345678)
-        const formattedPhone = phone.startsWith('0')
-            ? '254' + phone.slice(1)
-            : phone.startsWith('+')
-                ? phone.slice(1)
-                : phone
-
-        // Step 4: Send STK Push
+        // Step 3: Send STK Push
         const stkRes = await fetch(
             'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
             {
                 method: 'POST',
                 headers: {
                     Authorization: `Bearer ${token}`,
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
                     BusinessShortCode: process.env.MPESA_SHORTCODE,
@@ -68,13 +62,13 @@ export default async function handler(req, res) {
                     Timestamp: timestamp,
                     TransactionType: 'CustomerPayBillOnline',
                     Amount: amount,
-                    PartyA: formattedPhone,
+                    PartyA: phone,
                     PartyB: process.env.MPESA_SHORTCODE,
-                    PhoneNumber: formattedPhone,
+                    PhoneNumber: phone,
                     CallBackURL: process.env.MPESA_CALLBACK_URL,
                     AccountReference: `NatureClub-${memberId}`,
-                    TransactionDesc: 'Nature Club Registration Fee'
-                })
+                    TransactionDesc: 'Nature Club Registration Fee',
+                }),
             }
         )
 
@@ -84,18 +78,20 @@ export default async function handler(req, res) {
             return res.status(400).json({ error: stkData.errorMessage || 'STK Push failed' })
         }
 
-        // Step 5: Save pending payment to Supabase
-        await supabase.from('payments').insert([{
-            member_id: memberId,
-            amount: amount,
-            status: 'pending',
-            checkout_request_id: stkData.CheckoutRequestID
-        }])
+        // Step 4: Save pending payment to Supabase
+        await supabase.from('payments').insert([
+            {
+                member_id: memberId,
+                amount: amount,
+                status: 'pending',
+                checkout_request_id: stkData.CheckoutRequestID,
+            },
+        ])
 
         return res.status(200).json({
             success: true,
             checkoutRequestId: stkData.CheckoutRequestID,
-            message: 'STK Push sent. Ask user to check their phone.'
+            message: 'STK Push sent successfully',
         })
 
     } catch (error) {
