@@ -66,7 +66,7 @@ export default async function handler(req, res) {
                     PartyB: process.env.MPESA_SHORTCODE,
                     PhoneNumber: phone,
                     CallBackURL: process.env.MPESA_CALLBACK_URL,
-                    AccountReference: `NatureClub-${memberId}`,
+                    AccountReference: `011957`,
                     TransactionDesc: 'Nature Club Registration Fee',
                 }),
             }
