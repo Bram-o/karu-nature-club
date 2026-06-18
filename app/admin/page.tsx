@@ -1,7 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { supabase } from '@/lib/supabaseClient'
+import { getCurrentUser, getUserRole } from '@/lib/auth'
+import { useRouter } from 'next/navigation'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type Tab = 'overview' | 'roles' | 'announcements' | 'events' | 'posts' | 'gallery' | 'blogs'
@@ -111,6 +113,26 @@ const roleColors: Record<string, string> = {
 
 // ── Main Component ─────────────────────────────────────────────────────────
 export default function AdminDashboard() {
+    const router = useRouter()
+    const [isLoadingAuth, setIsLoadingAuth] = useState(true)
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            const user = await getCurrentUser()
+            if (!user) {
+                router.push('/login')
+                return
+            }
+            const role = await getUserRole(user.id)
+            if (role !== 'admin') {
+                router.push('/')
+                return
+            }
+            setIsLoadingAuth(false)
+        }
+        checkAuth()
+    }, [router])
+
     const [activeTab, setActiveTab] = useState<Tab>('overview')
     const [members, setMembers] = useState<Member[]>(mockMembers)
     const [announcements, setAnnouncements] = useState<Announcement[]>(mockAnnouncements)
@@ -236,6 +258,14 @@ export default function AdminDashboard() {
     }
 
     // ── Render ─────────────────────────────────────────────────────────────
+    if (isLoadingAuth) {
+        return (
+            <div className="min-h-screen bg-gray-50 flex items-center justify-center font-lato">
+                <p className="text-forest font-bold">Loading...</p>
+            </div>
+        )
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 font-lato">
 

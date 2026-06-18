@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { getCurrentUser, getUserRole } from '@/lib/auth'
+import { useRouter } from 'next/navigation'
 
 // ── Types ──────────────────────────────────────────────────────────────────
 type EditorTab = 'overview' | 'posts' | 'photos' | 'events' | 'blogs'
@@ -68,6 +70,26 @@ const statusColors: Record<string, string> = {
 
 // ── Main Component ─────────────────────────────────────────────────────────
 export default function EditorDashboard() {
+    const router = useRouter()
+    const [isLoadingAuth, setIsLoadingAuth] = useState(true)
+
+    useEffect(() => {
+        const checkAuth = async () => {
+            const user = await getCurrentUser()
+            if (!user) {
+                router.push('/login')
+                return
+            }
+            const role = await getUserRole(user.id)
+            if (role !== 'editor' && role !== 'admin') {
+                router.push('/')
+                return
+            }
+            setIsLoadingAuth(false)
+        }
+        checkAuth()
+    }, [router])
+
     const [activeTab, setActiveTab] = useState<EditorTab>('overview')
     const [posts, setPosts] = useState<Post[]>(mockPosts)
     const [photos, setPhotos] = useState<Photo[]>(mockPhotos)
@@ -191,6 +213,14 @@ export default function EditorDashboard() {
     }
 
     // ── Render ─────────────────────────────────────────────────────────────
+    if (isLoadingAuth) {
+        return (
+            <div className="min-h-screen bg-gray-50 flex items-center justify-center font-lato">
+                <p className="text-moss font-bold">Loading...</p>
+            </div>
+        )
+    }
+
     return (
         <div className="min-h-screen bg-gray-50 font-lato">
 
